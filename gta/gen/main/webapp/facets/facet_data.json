@@ -1,5 +1,10 @@
 {
 uif_buscar_involucrados:{
+facet_genero:{
+label: "${_UI_Facet_uif_buscar_involucrados_facet_genero_facet_genero}",
+picklist:"xcp.picklist.uif_pl_genero"
+}
+,
 facet_pais_nacimiento:{
 label: "${_UI_Facet_uif_buscar_involucrados_facet_pais_nacimiento_facet_pais_nacimiento}"
 }

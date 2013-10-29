@@ -94,7 +94,7 @@
             <propertyMap key="xcpId" value="//@rootContainer/@children.0/@children.0/@children.0/@children.0/@properties.6"/>
           </children>
           <children xsi:type="uitemplate:Container" componentDefinitionId="xcp_nav_button" parent="//@rootContainer/@children.0/@children.0/@children.0" widgetEntry="//@widgetMap[key='nav_button1']">
-            <properties name="text" value="Menu Item 2" entry="//@rootContainer/@children.0/@children.0/@children.0/@children.1/@propertyMap.0"/>
+            <properties name="text" value="Buscar" entry="//@rootContainer/@children.0/@children.0/@children.0/@children.1/@propertyMap.0"/>
             <properties name="iconCls" value="" entry="//@rootContainer/@children.0/@children.0/@children.0/@children.1/@propertyMap.1"/>
             <properties name="xcp_menu_onhover" value="" type="BOOLEAN" entry="//@rootContainer/@children.0/@children.0/@children.0/@children.1/@propertyMap.2"/>
             <properties name="xcp_nav_type" value="page" entry="//@rootContainer/@children.0/@children.0/@children.0/@children.1/@propertyMap.3"/>

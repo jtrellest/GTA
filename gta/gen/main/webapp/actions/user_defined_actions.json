@@ -1,59 +1,5 @@
 {
   "xcp_dm_document" : {
-    "xcp_attachment_sel" : {
-      "flowDef" : {
-        "action-type" : "Selector",
-        "actionmodel" : {
-          "name" : "xcp_attachment_sel"
-        },
-        "initial-state" : "viewState_attachment_selector",
-        "view-state" : [ {
-          "id" : "viewState_attachment_selector",
-          "xcpId" : "attachment_step",
-          "pageUrl" : "xcp_dm_document/xcp_dm_document_xcp_attachment_step",
-          "transition" : [ {
-            "on" : "cancel",
-            "to" : "cancel"
-          }, {
-            "on" : "finish",
-            "to" : "finish"
-          } ]
-        } ],
-        "action-state" : [ {
-          "id" : "finish",
-          "actionInstanceId" : "da_actionflow_attachment_selector",
-          "transition" : [ {
-            "on" : "success",
-            "to" : "success"
-          }, {
-            "on" : "error",
-            "to" : "error"
-          } ]
-        } ],
-        "end-state" : [ {
-          "id" : "success"
-        }, {
-          "id" : "error"
-        }, {
-          "id" : "cancel"
-        } ],
-        "data-action" : [ {
-          "xcpId" : "da_actionflow_attachment_selector",
-          "actionType" : "selector",
-          "actionModel" : "xcp_da_def_selector_rootbo",
-          "plugins" : [ {
-            "ptype" : "xcp_actionflow_expression_properties",
-            "expression" : [ {
-              "propertyId" : "selection",
-              "setterFunName" : "setInputProperty",
-              "etype" : "attachment_sel_da_selection_1",
-              "pageId" : "attachment_step",
-              "events" : ["results_list.selectionchange" ]
-            } ]
-          } ]
-        } ]
-      }
-    },
     "xcp_selector_content" : {
       "flowDef" : {
         "action-type" : "Selector",
@@ -107,9 +53,121 @@
           } ]
         } ]
       }
+    },
+    "xcp_attachment_sel" : {
+      "flowDef" : {
+        "action-type" : "Selector",
+        "actionmodel" : {
+          "name" : "xcp_attachment_sel"
+        },
+        "initial-state" : "viewState_attachment_selector",
+        "view-state" : [ {
+          "id" : "viewState_attachment_selector",
+          "xcpId" : "attachment_step",
+          "pageUrl" : "xcp_dm_document/xcp_dm_document_xcp_attachment_step",
+          "transition" : [ {
+            "on" : "cancel",
+            "to" : "cancel"
+          }, {
+            "on" : "finish",
+            "to" : "finish"
+          } ]
+        } ],
+        "action-state" : [ {
+          "id" : "finish",
+          "actionInstanceId" : "da_actionflow_attachment_selector",
+          "transition" : [ {
+            "on" : "success",
+            "to" : "success"
+          }, {
+            "on" : "error",
+            "to" : "error"
+          } ]
+        } ],
+        "end-state" : [ {
+          "id" : "success"
+        }, {
+          "id" : "error"
+        }, {
+          "id" : "cancel"
+        } ],
+        "data-action" : [ {
+          "xcpId" : "da_actionflow_attachment_selector",
+          "actionType" : "selector",
+          "actionModel" : "xcp_da_def_selector_rootbo",
+          "plugins" : [ {
+            "ptype" : "xcp_actionflow_expression_properties",
+            "expression" : [ {
+              "propertyId" : "selection",
+              "setterFunName" : "setInputProperty",
+              "etype" : "attachment_sel_da_selection_1",
+              "pageId" : "attachment_step",
+              "events" : ["results_list.selectionchange" ]
+            } ]
+          } ]
+        } ]
+      }
     }
   },
   "xcp_currenttask" : {
+    "xcp_assign_task" : {
+      "flowDef" : {
+        "action-type" : "AssignTask",
+        "actionmodel" : {
+          "name" : "xcp_da_def_assign_currenttask"
+        },
+        "initial-state" : "viewState_user_from_queue",
+        "view-state" : [ {
+          "id" : "viewState_user_from_queue",
+          "xcpId" : "user_from_queue",
+          "pageUrl" : "application/xcp_user_from_queue",
+          "transition" : [ {
+            "on" : "cancel",
+            "to" : "cancel"
+          }, {
+            "on" : "finish",
+            "to" : "finish"
+          } ]
+        } ],
+        "action-state" : [ {
+          "id" : "finish",
+          "actionInstanceId" : "da_actionflow_assign_task",
+          "transition" : [ {
+            "on" : "success",
+            "to" : "success"
+          }, {
+            "on" : "error",
+            "to" : "error"
+          } ]
+        } ],
+        "end-state" : [ {
+          "id" : "success"
+        }, {
+          "id" : "error"
+        }, {
+          "id" : "cancel"
+        } ],
+        "data-action" : [ {
+          "xcpId" : "da_actionflow_assign_task",
+          "actionType" : "xcp_assign_task",
+          "actionModel" : "xcp_da_def_assign_currenttask",
+          "plugins" : [ {
+            "ptype" : "xcp_actionflow_expression_properties",
+            "expression" : [ {
+              "propertyId" : "id",
+              "setterFunName" : "setInputProperty",
+              "etype" : "assign_task_da_id_1"
+            }, {
+              "propertyId" : "userName",
+              "setterFunName" : "setInputProperty",
+              "etype" : "assign_task_da_userName_1",
+              "pageId" : "user_from_queue",
+              "events" : ["dropdown_list.change" ]
+            } ]
+          } ]
+        } ]
+      }
+    },
     "xcp_reassign_task" : {
       "flowDef" : {
         "action-type" : "ReassignTask",
@@ -226,64 +284,6 @@
         } ]
       }
     },
-    "xcp_assign_task" : {
-      "flowDef" : {
-        "action-type" : "AssignTask",
-        "actionmodel" : {
-          "name" : "xcp_da_def_assign_currenttask"
-        },
-        "initial-state" : "viewState_user_from_queue",
-        "view-state" : [ {
-          "id" : "viewState_user_from_queue",
-          "xcpId" : "user_from_queue",
-          "pageUrl" : "application/xcp_user_from_queue",
-          "transition" : [ {
-            "on" : "cancel",
-            "to" : "cancel"
-          }, {
-            "on" : "finish",
-            "to" : "finish"
-          } ]
-        } ],
-        "action-state" : [ {
-          "id" : "finish",
-          "actionInstanceId" : "da_actionflow_assign_task",
-          "transition" : [ {
-            "on" : "success",
-            "to" : "success"
-          }, {
-            "on" : "error",
-            "to" : "error"
-          } ]
-        } ],
-        "end-state" : [ {
-          "id" : "success"
-        }, {
-          "id" : "error"
-        }, {
-          "id" : "cancel"
-        } ],
-        "data-action" : [ {
-          "xcpId" : "da_actionflow_assign_task",
-          "actionType" : "xcp_assign_task",
-          "actionModel" : "xcp_da_def_assign_currenttask",
-          "plugins" : [ {
-            "ptype" : "xcp_actionflow_expression_properties",
-            "expression" : [ {
-              "propertyId" : "id",
-              "setterFunName" : "setInputProperty",
-              "etype" : "assign_task_da_id_1"
-            }, {
-              "propertyId" : "userName",
-              "setterFunName" : "setInputProperty",
-              "etype" : "assign_task_da_userName_1",
-              "pageId" : "user_from_queue",
-              "events" : ["dropdown_list.change" ]
-            } ]
-          } ]
-        } ]
-      }
-    },
     "xcp_hold_task" : {
       "flowDef" : {
         "action-type" : "HoldTask",
@@ -344,6 +344,38 @@
     }
   },
   "xcp_dm_folder" : {
+    "gta_base_folder" : {
+      "flowDef" : {
+        "action-type" : "Create",
+        "actionmodel" : {
+          "name" : "xcp_dm_folder_base_folder_model",
+          "attribute-mapping" : {
+            "object_name" : "xcp_dm_folder_base_folder_model.object_name",
+            "subject" : "xcp_dm_folder_base_folder_model.subject",
+            "title" : "xcp_dm_folder_base_folder_model.title",
+            "content_id" : "xcp_dm_folder_base_folder_model.content_id",
+            "folder_id" : "xcp_dm_folder_base_folder_model.folder_id"
+          }
+        },
+        "initial-state" : "base_folder_step_1",
+        "view-state" : [ {
+          "id" : "base_folder_step_1",
+          "pageUrl" : "xcp_dm_folder/xcp_dm_folder_gta_base_folder_step_1",
+          "output-model" : {
+            "xcp_dm_folder_base_folder_model" : "xcp_dm_folder_base_folder_model"
+          },
+          "transition" : [ {
+            "on" : "cancel"
+          }, {
+            "on" : "finish"
+          } ]
+        } ],
+        "action-state" : {
+          "id" : "finish",
+          "action" : "save"
+        }
+      }
+    },
     "xcp_selector_folder" : {
       "flowDef" : {
         "action-type" : "Selector",
@@ -396,38 +428,6 @@
             } ]
           } ]
         } ]
-      }
-    },
-    "gta_base_folder" : {
-      "flowDef" : {
-        "action-type" : "Create",
-        "actionmodel" : {
-          "name" : "xcp_dm_folder_base_folder_model",
-          "attribute-mapping" : {
-            "object_name" : "xcp_dm_folder_base_folder_model.object_name",
-            "subject" : "xcp_dm_folder_base_folder_model.subject",
-            "title" : "xcp_dm_folder_base_folder_model.title",
-            "content_id" : "xcp_dm_folder_base_folder_model.content_id",
-            "folder_id" : "xcp_dm_folder_base_folder_model.folder_id"
-          }
-        },
-        "initial-state" : "base_folder_step_1",
-        "view-state" : [ {
-          "id" : "base_folder_step_1",
-          "pageUrl" : "xcp_dm_folder/xcp_dm_folder_gta_base_folder_step_1",
-          "output-model" : {
-            "xcp_dm_folder_base_folder_model" : "xcp_dm_folder_base_folder_model"
-          },
-          "transition" : [ {
-            "on" : "cancel"
-          }, {
-            "on" : "finish"
-          } ]
-        } ],
-        "action-state" : {
-          "id" : "finish",
-          "action" : "save"
-        }
       }
     }
   }
