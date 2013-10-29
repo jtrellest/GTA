@@ -1,0 +1,17 @@
+{
+uif_buscar_involucrados:{
+facet_pais_nacimiento:{
+label: "${_UI_Facet_uif_buscar_involucrados_facet_pais_nacimiento_facet_pais_nacimiento}"
+}
+,
+facet_profesiones:{
+label: "${_UI_Facet_uif_buscar_involucrados_facet_profesiones_facet_profesiones}"
+}
+,
+facet_tipo_persona:{
+label: "${_UI_Facet_uif_buscar_involucrados_facet_tipo_persona_facet_tipo_persona}",
+picklist:"xcp.picklist.uif_pl_tipo_persona"
+}
+
+}
+}

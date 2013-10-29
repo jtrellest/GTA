@@ -1,0 +1,1915 @@
+/*******************************************************************
+ Generic custom theme file for xCP 2.0
+ Created by Nick King (nick.king@emc.com)
+*******************************************************************/
+/*
+Useful reference for variables than can be overidden are found here by default:
+  C:\xCPDesigner\plugins\com.emc.xcp.uitemplate.ui_1.0.0.201207231713\WebContent\js\resources\themes\stylesheets\xcp\default\variables
+*/
+/******************************
+ SASS imports                */
+/**
+ * @var {string} $prefix 
+ * The prefix to be applied to all CSS selectors. If this is changed, it must also be changed in your 
+ * JavaScript application.
+ */
+/**
+ * @var {string} $theme-name 
+ * The name of the theme. This must match the the output directory of the images.
+ * (defaults to 'default')
+ */
+/**
+ * @var {boolean/string} $relative-image-path-for-uis 
+ * True to use a relative image path for all new UIs. If true, the path will be "../images/".
+ * It can also be a string of the path value.
+ * It defaults to false, which means it will look for the images in the ExtJS SDK folder.
+ */
+/**
+ * @var {string} $font-family 
+ * The default font-family to be used throughout the theme.
+ */
+/**
+ * @var {string} $base-gradient 
+ * The base gradient to be used throughout the theme.
+ */
+/**
+ * @var {color} $base-color
+ * The base color to be used throughout the theme.
+ */
+/**
+ * @var {boolean} $include-not-found-images
+ * True to include files which are not found when compiling your SASS
+ */
+/**
+ * @var {boolean} $include-ie
+ * True to include Internet Explorer specific rules
+ */
+/**
+ * @var {boolean} $include-ff
+ * True to include Firefox specific rules
+ */
+/**
+ * @var {boolean} $include-chrome
+ * True to include Chrome specific rules
+ */
+/**
+ * @var {boolean} $include-safari
+ * True to include Safari specific rules
+ */
+/**
+ * @var {boolean} $include-opera
+ * True to include Opera specific rules
+ */
+/**
+ * @var {boolean} $include-webkit
+ * True to include Webkit specific rules
+ */
+/**
+ * @var {boolean} $compile-all
+ * True to copile all CSS, even if above include rules are false
+ */
+/**
+ * @var {boolean} $scope-reset-css
+ * True to scope the reset CSS within the $prefix variable.
+ */
+/**
+ * @var {color} $css-shadow-background-color
+ * The base color for CSS shadows
+ */
+/**
+ * @var {color} $include-shadow-images
+ * True to include all shadow images.
+ */
+/**
+ * Toolbar buttons
+ */
+/**
+ * @class Ext.form.*
+ */
+/**
+ * @class Ext.form.field.Base
+ */
+/**
+ * @class Ext.form.field.TextArea
+ */
+/**
+ * @class Ext.form.Label
+ */
+/**
+ * @class Ext.form.field.Checkbox
+ */
+/**
+ * @class Ext.form.field.Radio
+ */
+/**
+ * Error messages
+ */
+/**
+ * Trigger Field
+ */
+/**
+ * Fieldsets
+ */
+/**
+ * Sliders
+ */
+/**
+ * @mixin background-gradient
+ * 
+ * @param {Color} $background-color The background color of the gradient
+ * @param {String/List} $type The type of gradient to be used. Can either be a String which is a predefined gradient, or it can
+ *                            can be a list of color_stops. If none is set, it will still set the `background-color` to the $background-color.
+ * @param {String} $direction The direction of the gradient. Can either me `top` or `left`. (defaults to `top`)
+ */
+/**
+ * Method which inserts a full background-image property for a theme image.
+ * It checks if the file exists and if it doesn't, it'll throw an error. 
+ * By default it will not include the background-image property if it is not found,
+ * but this can be changed by changing the default value of $include-missing-images to 
+ * be true. 
+ */
+/**
+  * @class Ext.Button
+  * Used to create the base structure of an Ext.Button
+  */
+/**
+*  This file contains all the xcp variables that is modifiable by the theme editor
+*/
+/** Default font **/
+/** widget selection color **/
+/** Widget Label Text **/
+/** Widget Value Text **/
+/** Widget Title Text **/
+/** Widget Button Text **/
+/** Link Text **/
+/** Widget Interior **/
+/** Widget Border **/
+/** Widget Header **/
+/** ColumnBox Header **/
+/** Widget Button **/
+/** Widget Panel **/
+/** Widget Labels **/
+/** List Selection **/
+/** Framework Tab **/
+/** App Header Background **/
+/** App Menu Background **/
+/** App Menu Border **/
+/** App Menu button **/
+/** App Menu Button Border **/
+/** App Menu marker **/
+/** Nav Menu **/
+/** Case Menu **/
+/** Master Background **/
+/** Page Background **/
+/** Content Area **/
+/** Menu, Context Menu **/
+/** Context menu item **/
+/** load mask **/
+/** Toolbar **/
+/** tab bar **/
+/** tab button **/
+/** ToolTip **/
+/** Window **/
+/** Date picker **/
+/* Box-Shadow for widgets */
+/* line 1, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201309122354/WebContent/js/resources/themes/stylesheets/xcp/default/widgets/_checkbox.scss */
+.x-form-cb-label {
+  font-family: Helvetica, Arial, sans-serif;
+  font: Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  font-weight: normal;
+  color: #363636;
+  word-wrap: break-word;
+}
+
+/* line 5, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201309122354/WebContent/js/resources/themes/stylesheets/xcp/default/widgets/_checkbox.scss */
+.x-item-disabled .x-form-cb-label {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=40);
+  opacity: 0.4;
+}
+
+/******************************
+ COLOR DEFINITIONS    
+ try colorschemedesigner.com */
+/******************************
+  MAIN BACKGROUND             
+*/
+/* line 67, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/Applications/gta/.metadata/.plugins/com.emc.xcp.uitemplate.ui/resources/custom-themes/xcptcln.CleanTheme-1.0.0.jar/cleantheme.scss */
+.xcp-viewport {
+  background-image: none;
+}
+
+/******************************
+  LOGIN PAGE             
+*/
+/* line 73, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/Applications/gta/.metadata/.plugins/com.emc.xcp.uitemplate.ui/resources/custom-themes/xcptcln.CleanTheme-1.0.0.jar/cleantheme.scss */
+.signin-panel .signin-form .x-panel-body {
+  background-image: none;
+}
+
+/* line 74, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/Applications/gta/.metadata/.plugins/com.emc.xcp.uitemplate.ui/resources/custom-themes/xcptcln.CleanTheme-1.0.0.jar/cleantheme.scss */
+.signin-panel .signin-logo-panel .x-panel-body {
+  background: url("../../../../../Artifacts/Resources/Logo.png") no-repeat scroll 0 0 transparent;
+  margin-left: 0px;
+}
+
+/******************************
+  BOLD LABELS
+*/
+/* line 82, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/Applications/gta/.metadata/.plugins/com.emc.xcp.uitemplate.ui/resources/custom-themes/xcptcln.CleanTheme-1.0.0.jar/cleantheme.scss */
+.x-form-item-label {
+  font-weight: bold;
+}
+
+/******************************
+  MAIN OVERRIDES from _xcp.scss
+*/
+/******************************
+ NAVIGATION MENU             
+*/
+/* line 14, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201309122354/WebContent/js/resources/themes/stylesheets/xcp/default/widgets/_app-menu.scss */
+.xcp-master-header > * > .x-box-inner {
+  background-image: none;
+  background-color: black;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #0c5aa6), color-stop(100%, #679ed2));
+  background-image: -webkit-linear-gradient(top, #0c5aa6 0%, #679ed2 100%);
+  background-image: -moz-linear-gradient(top, #0c5aa6 0%, #679ed2 100%);
+  background-image: -o-linear-gradient(top, #0c5aa6 0%, #679ed2 100%);
+  background-image: -ms-linear-gradient(top, #0c5aa6 0%, #679ed2 100%);
+  background-image: linear-gradient(top, #0c5aa6 0%, #679ed2 100%);
+}
+
+/* line 18, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201309122354/WebContent/js/resources/themes/stylesheets/xcp/default/widgets/_app-menu.scss */
+.nav-menu-caret {
+  position: relative;
+  width: 0;
+  height: 0;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-bottom: 7px solid white;
+}
+
+/* line 23, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201309122354/WebContent/js/resources/themes/stylesheets/xcp/default/widgets/_app-menu.scss */
+.nav-menu-caret.x-layer {
+  overflow: visible;
+}
+
+/* line 27, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201309122354/WebContent/js/resources/themes/stylesheets/xcp/default/widgets/_app-menu.scss */
+.nav-menu-caret .inner-caret {
+  position: relative;
+  top: 2px;
+  right: 6px;
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-bottom: 6px solid #3399cc;
+}
+
+/* line 34, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201309122354/WebContent/js/resources/themes/stylesheets/xcp/default/widgets/_app-menu.scss */
+.xcp-master-header .x-toolbar-xcp-nav-toolbar {
+  border: none;
+  background: none;
+}
+
+/* line 41, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201309122354/WebContent/js/resources/themes/stylesheets/xcp/default/widgets/_app-menu.scss */
+.x-toolbar {
+  border: none;
+}
+
+/* line 46, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201309122354/WebContent/js/resources/themes/stylesheets/xcp/default/widgets/_app-menu.scss */
+.xcp_nav_menuitem-cls .x-menu-item-link {
+  margin: 0px;
+}
+
+/* line 52, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201309122354/WebContent/js/resources/themes/stylesheets/xcp/default/widgets/_app-menu.scss */
+.xcp_nav_menuitem-cls.x-menu-item-active .x-menu-item-link {
+  border: 0px;
+  margin: 0px;
+  background-color: #3399cc !important;
+}
+
+/* line 59, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201309122354/WebContent/js/resources/themes/stylesheets/xcp/default/widgets/_app-menu.scss */
+.x-toolbar-xcp-nav-toolbar {
+  position: relative;
+  background-image: none;
+  background-color: black;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #0c5aa6), color-stop(100%, #679ed2));
+  background-image: -webkit-linear-gradient(top, #0c5aa6 0%, #679ed2 100%);
+  background-image: -moz-linear-gradient(top, #0c5aa6 0%, #679ed2 100%);
+  background-image: -o-linear-gradient(top, #0c5aa6 0%, #679ed2 100%);
+  background-image: -ms-linear-gradient(top, #0c5aa6 0%, #679ed2 100%);
+  background-image: linear-gradient(top, #0c5aa6 0%, #679ed2 100%);
+  border-bottom: 3px #0c5aa6 solid !important;
+}
+/* line 633, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201309122354/WebContent/js/ext-4.1/resources/themes/stylesheets/ext4/default/widgets/_button.scss */
+.x-toolbar-xcp-nav-toolbar .x-btn-xcp-nav-button-toolbar-small {
+  border-color: transparent;
+}
+/* line 69, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201309122354/WebContent/js/ext-4.1/resources/themes/stylesheets/ext4/default/mixins/_frame.scss */
+.x-toolbar-xcp-nav-toolbar .x-btn-xcp-nav-button-toolbar-small {
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  -o-border-radius: 0;
+  -ms-border-radius: 0;
+  -khtml-border-radius: 0;
+  border-radius: 0;
+  padding: 8px 0 6px 0;
+  border-width: 1px;
+  border-style: solid;
+  background-color: none;
+}
+/* line 102, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201309122354/WebContent/js/ext-4.1/resources/themes/stylesheets/ext4/default/mixins/_frame.scss */
+.x-toolbar-xcp-nav-toolbar .x-nlg .x-btn-xcp-nav-button-toolbar-small-mc {
+  background-color: none;
+}
+/* line 115, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201309122354/WebContent/js/ext-4.1/resources/themes/stylesheets/ext4/default/mixins/_frame.scss */
+.x-toolbar-xcp-nav-toolbar .x-nbr .x-btn-xcp-nav-button-toolbar-small {
+  padding: 0 !important;
+  border-width: 0 !important;
+  -moz-border-radius: 0px;
+  -webkit-border-radius: 0px;
+  -o-border-radius: 0px;
+  -ms-border-radius: 0px;
+  -khtml-border-radius: 0px;
+  border-radius: 0px;
+  background-color: transparent;
+  background-position: 1100000px 1000000px;
+}
+/* line 147, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201309122354/WebContent/js/ext-4.1/resources/themes/stylesheets/ext4/default/mixins/_frame.scss */
+.x-toolbar-xcp-nav-toolbar .x-nbr .x-btn-xcp-nav-button-toolbar-small-tl,
+.x-toolbar-xcp-nav-toolbar .x-nbr .x-btn-xcp-nav-button-toolbar-small-bl,
+.x-toolbar-xcp-nav-toolbar .x-nbr .x-btn-xcp-nav-button-toolbar-small-tr,
+.x-toolbar-xcp-nav-toolbar .x-nbr .x-btn-xcp-nav-button-toolbar-small-br,
+.x-toolbar-xcp-nav-toolbar .x-nbr .x-btn-xcp-nav-button-toolbar-small-tc,
+.x-toolbar-xcp-nav-toolbar .x-nbr .x-btn-xcp-nav-button-toolbar-small-bc,
+.x-toolbar-xcp-nav-toolbar .x-nbr .x-btn-xcp-nav-button-toolbar-small-ml,
+.x-toolbar-xcp-nav-toolbar .x-nbr .x-btn-xcp-nav-button-toolbar-small-mr {
+  zoom: 1;
+  background-image: url('../../ext-4.1/resources/themes/images/default/btn/btn-xcp-nav-button-toolbar-small-corners.gif');
+}
+/* line 168, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201309122354/WebContent/js/ext-4.1/resources/themes/stylesheets/ext4/default/mixins/_frame.scss */
+.x-toolbar-xcp-nav-toolbar .x-nbr .x-btn-xcp-nav-button-toolbar-small-ml,
+.x-toolbar-xcp-nav-toolbar .x-nbr .x-btn-xcp-nav-button-toolbar-small-mr {
+  zoom: 1;
+  background-image: url('../../ext-4.1/resources/themes/images/default/btn/btn-xcp-nav-button-toolbar-small-sides.gif');
+  background-position: 0 0;
+  background-repeat: repeat-y;
+}
+/* line 200, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201309122354/WebContent/js/ext-4.1/resources/themes/stylesheets/ext4/default/mixins/_frame.scss */
+.x-toolbar-xcp-nav-toolbar .x-nbr .x-btn-xcp-nav-button-toolbar-small-mc {
+  padding: 9px 1px 7px 1px;
+}
+/* line 210, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201309122354/WebContent/js/ext-4.1/resources/themes/stylesheets/ext4/default/mixins/_frame.scss */
+.x-toolbar-xcp-nav-toolbar .x-strict .x-ie7 .x-btn-xcp-nav-button-toolbar-small-tl,
+.x-toolbar-xcp-nav-toolbar .x-strict .x-ie7 .x-btn-xcp-nav-button-toolbar-small-bl {
+  position: relative;
+  right: 0;
+}
+/* line 639, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201309122354/WebContent/js/ext-4.1/resources/themes/stylesheets/ext4/default/widgets/_button.scss */
+.x-toolbar-xcp-nav-toolbar .x-btn-xcp-nav-button-toolbar-small .x-btn-inner {
+  font-size: 14px;
+  font-weight: bold;
+  font-family: GothamLight, Helvetica, Arial;
+  color: white;
+  background-repeat: no-repeat;
+  padding: 0 5px;
+}
+/* line 652, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201309122354/WebContent/js/ext-4.1/resources/themes/stylesheets/ext4/default/widgets/_button.scss */
+.x-toolbar-xcp-nav-toolbar .x-btn-xcp-nav-button-toolbar-small-icon button,
+.x-toolbar-xcp-nav-toolbar .x-btn-xcp-nav-button-toolbar-small-icon a,
+.x-toolbar-xcp-nav-toolbar .x-btn-xcp-nav-button-toolbar-small-icon .x-btn-inner,
+.x-toolbar-xcp-nav-toolbar .x-btn-xcp-nav-button-toolbar-small-noicon button,
+.x-toolbar-xcp-nav-toolbar .x-btn-xcp-nav-button-toolbar-small-noicon a,
+.x-toolbar-xcp-nav-toolbar .x-btn-xcp-nav-button-toolbar-small-noicon .x-btn-inner {
+  height: 16px;
+  line-height: 16px;
+}
+/* line 661, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201309122354/WebContent/js/ext-4.1/resources/themes/stylesheets/ext4/default/widgets/_button.scss */
+.x-toolbar-xcp-nav-toolbar .x-btn-xcp-nav-button-toolbar-small-icon button,
+.x-toolbar-xcp-nav-toolbar .x-btn-xcp-nav-button-toolbar-small-icon a {
+  padding: 0;
+}
+/* line 665, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201309122354/WebContent/js/ext-4.1/resources/themes/stylesheets/ext4/default/widgets/_button.scss */
+.x-toolbar-xcp-nav-toolbar .x-btn-xcp-nav-button-toolbar-small-icon .x-btn-inner {
+  /* even though there is no text we set a width and padding as buttons shrink-wrap around this element */
+  width: 16px;
+  padding: 0;
+}
+/* line 671, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201309122354/WebContent/js/ext-4.1/resources/themes/stylesheets/ext4/default/widgets/_button.scss */
+.x-toolbar-xcp-nav-toolbar .x-btn-xcp-nav-button-toolbar-small-icon .x-btn-icon {
+  width: 16px;
+  height: 16px;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+/* line 683, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201309122354/WebContent/js/ext-4.1/resources/themes/stylesheets/ext4/default/widgets/_button.scss */
+.x-toolbar-xcp-nav-toolbar .x-btn-xcp-nav-button-toolbar-small-icon-text-left button,
+.x-toolbar-xcp-nav-toolbar .x-btn-xcp-nav-button-toolbar-small-icon-text-left a {
+  height: 16px;
+}
+/* line 686, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201309122354/WebContent/js/ext-4.1/resources/themes/stylesheets/ext4/default/widgets/_button.scss */
+.x-toolbar-xcp-nav-toolbar .x-btn-xcp-nav-button-toolbar-small-icon-text-left .x-btn-inner {
+  height: 16px;
+  line-height: 16px;
+  padding-left: 20px;
+}
+/* line 692, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201309122354/WebContent/js/ext-4.1/resources/themes/stylesheets/ext4/default/widgets/_button.scss */
+.x-toolbar-xcp-nav-toolbar .x-btn-xcp-nav-button-toolbar-small-icon-text-left .x-btn-icon {
+  width: 16px;
+  height: auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: auto;
+}
+/* line 701, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201309122354/WebContent/js/ext-4.1/resources/themes/stylesheets/ext4/default/widgets/_button.scss */
+.x-ie6 .x-toolbar-xcp-nav-toolbar .x-btn-xcp-nav-button-toolbar-small-icon-text-left .x-btn-icon, .x-quirks .x-toolbar-xcp-nav-toolbar .x-btn-xcp-nav-button-toolbar-small-icon-text-left .x-btn-icon {
+  height: 16px;
+}
+/* line 709, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201309122354/WebContent/js/ext-4.1/resources/themes/stylesheets/ext4/default/widgets/_button.scss */
+.x-toolbar-xcp-nav-toolbar .x-btn-xcp-nav-button-toolbar-small-icon-text-right button,
+.x-toolbar-xcp-nav-toolbar .x-btn-xcp-nav-button-toolbar-small-icon-text-right a {
+  height: 16px;
+}
+/* line 712, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201309122354/WebContent/js/ext-4.1/resources/themes/stylesheets/ext4/default/widgets/_button.scss */
+.x-toolbar-xcp-nav-toolbar .x-btn-xcp-nav-button-toolbar-small-icon-text-right .x-btn-inner {
+  height: 16px;
+  line-height: 16px;
+  padding-right: 20px !important;
+}
+/* line 718, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201309122354/WebContent/js/ext-4.1/resources/themes/stylesheets/ext4/default/widgets/_button.scss */
+.x-toolbar-xcp-nav-toolbar .x-btn-xcp-nav-button-toolbar-small-icon-text-right .x-btn-icon {
+  width: 16px;
+  height: auto;
+  top: 0;
+  left: auto;
+  bottom: 0;
+  right: 0;
+}
+/* line 727, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201309122354/WebContent/js/ext-4.1/resources/themes/stylesheets/ext4/default/widgets/_button.scss */
+.x-ie6 .x-toolbar-xcp-nav-toolbar .x-btn-xcp-nav-button-toolbar-small-icon-text-right .x-btn-icon, .x-quirks .x-toolbar-xcp-nav-toolbar .x-btn-xcp-nav-button-toolbar-small-icon-text-right .x-btn-icon {
+  height: 16px;
+}
+/* line 734, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201309122354/WebContent/js/ext-4.1/resources/themes/stylesheets/ext4/default/widgets/_button.scss */
+.x-toolbar-xcp-nav-toolbar .x-btn-xcp-nav-button-toolbar-small-icon-text-top .x-btn-inner {
+  padding-top: 20px;
+}
+/* line 738, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201309122354/WebContent/js/ext-4.1/resources/themes/stylesheets/ext4/default/widgets/_button.scss */
+.x-toolbar-xcp-nav-toolbar .x-btn-xcp-nav-button-toolbar-small-icon-text-top .x-btn-icon {
+  width: auto;
+  height: 16px;
+  top: 0;
+  left: 0;
+  bottom: auto;
+  right: 0;
+}
+/* line 747, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201309122354/WebContent/js/ext-4.1/resources/themes/stylesheets/ext4/default/widgets/_button.scss */
+.x-ie6 .x-toolbar-xcp-nav-toolbar .x-btn-xcp-nav-button-toolbar-small-icon-text-top .x-btn-icon, .x-quirks .x-ie .x-toolbar-xcp-nav-toolbar .x-btn-xcp-nav-button-toolbar-small-icon-text-top .x-btn-icon {
+  width: 16px;
+}
+/* line 754, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201309122354/WebContent/js/ext-4.1/resources/themes/stylesheets/ext4/default/widgets/_button.scss */
+.x-toolbar-xcp-nav-toolbar .x-btn-xcp-nav-button-toolbar-small-icon-text-bottom .x-btn-inner {
+  padding-bottom: 20px;
+}
+/* line 758, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201309122354/WebContent/js/ext-4.1/resources/themes/stylesheets/ext4/default/widgets/_button.scss */
+.x-toolbar-xcp-nav-toolbar .x-btn-xcp-nav-button-toolbar-small-icon-text-bottom .x-btn-icon {
+  width: auto;
+  height: 16px;
+  top: auto;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+/* line 767, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201309122354/WebContent/js/ext-4.1/resources/themes/stylesheets/ext4/default/widgets/_button.scss */
+.x-ie6 .x-toolbar-xcp-nav-toolbar .x-btn-xcp-nav-button-toolbar-small-icon-text-bottom .x-btn-icon, .x-quirks .x-ie .x-toolbar-xcp-nav-toolbar .x-btn-xcp-nav-button-toolbar-small-icon-text-bottom .x-btn-icon {
+  width: 16px;
+}
+/* line 773, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201309122354/WebContent/js/ext-4.1/resources/themes/stylesheets/ext4/default/widgets/_button.scss */
+.x-toolbar-xcp-nav-toolbar .x-btn-xcp-nav-button-toolbar-small-over {
+  border-color: rgba(64, 191, 255, 0.25);
+  background-image: none;
+  background-color: rgba(103, 158, 210, 0.5);
+}
+/* line 797, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201309122354/WebContent/js/ext-4.1/resources/themes/stylesheets/ext4/default/widgets/_button.scss */
+.x-toolbar-xcp-nav-toolbar .x-btn-xcp-nav-button-toolbar-small-focus {
+  background-image: none;
+  background-color: rgba(51, 153, 204, 0.25);
+}
+/* line 822, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201309122354/WebContent/js/ext-4.1/resources/themes/stylesheets/ext4/default/widgets/_button.scss */
+.x-toolbar-xcp-nav-toolbar .x-btn-xcp-nav-button-toolbar-small-menu-active,
+.x-toolbar-xcp-nav-toolbar .x-btn-xcp-nav-button-toolbar-small-pressed {
+  background-image: none;
+  background-color: none;
+}
+/* line 846, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201309122354/WebContent/js/ext-4.1/resources/themes/stylesheets/ext4/default/widgets/_button.scss */
+.x-toolbar-xcp-nav-toolbar .x-btn-xcp-nav-button-toolbar-small-disabled {
+  background-image: none;
+  background-color: transparent;
+}
+/* line 894, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201309122354/WebContent/js/ext-4.1/resources/themes/stylesheets/ext4/default/widgets/_button.scss */
+.x-toolbar-xcp-nav-toolbar .x-nbr .x-btn-xcp-nav-button-toolbar-small-over .x-frame-tl,
+.x-toolbar-xcp-nav-toolbar .x-nbr .x-btn-xcp-nav-button-toolbar-small-over .x-frame-bl,
+.x-toolbar-xcp-nav-toolbar .x-nbr .x-btn-xcp-nav-button-toolbar-small-over .x-frame-tr,
+.x-toolbar-xcp-nav-toolbar .x-nbr .x-btn-xcp-nav-button-toolbar-small-over .x-frame-br,
+.x-toolbar-xcp-nav-toolbar .x-nbr .x-btn-xcp-nav-button-toolbar-small-over .x-frame-tc,
+.x-toolbar-xcp-nav-toolbar .x-nbr .x-btn-xcp-nav-button-toolbar-small-over .x-frame-bc {
+  background-image: url('../../ext-4.1/resources/themes/images/default/btn/btn-xcp-nav-button-toolbar-small-over-corners.gif');
+}
+/* line 898, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201309122354/WebContent/js/ext-4.1/resources/themes/stylesheets/ext4/default/widgets/_button.scss */
+.x-toolbar-xcp-nav-toolbar .x-nbr .x-btn-xcp-nav-button-toolbar-small-over .x-frame-ml,
+.x-toolbar-xcp-nav-toolbar .x-nbr .x-btn-xcp-nav-button-toolbar-small-over .x-frame-mr {
+  background-image: url('../../ext-4.1/resources/themes/images/default/btn/btn-xcp-nav-button-toolbar-small-over-sides.gif');
+}
+/* line 901, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201309122354/WebContent/js/ext-4.1/resources/themes/stylesheets/ext4/default/widgets/_button.scss */
+.x-toolbar-xcp-nav-toolbar .x-nbr .x-btn-xcp-nav-button-toolbar-small-over .x-frame-mc {
+  background-color: rgba(103, 158, 210, 0.5);
+  background-image: url('../../ext-4.1/resources/themes/images/default/btn/btn-xcp-nav-button-toolbar-small-over-bg.gif');
+}
+/* line 915, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201309122354/WebContent/js/ext-4.1/resources/themes/stylesheets/ext4/default/widgets/_button.scss */
+.x-toolbar-xcp-nav-toolbar .x-nbr .x-btn-xcp-nav-button-toolbar-small-focus .x-frame-tl,
+.x-toolbar-xcp-nav-toolbar .x-nbr .x-btn-xcp-nav-button-toolbar-small-focus .x-frame-bl,
+.x-toolbar-xcp-nav-toolbar .x-nbr .x-btn-xcp-nav-button-toolbar-small-focus .x-frame-tr,
+.x-toolbar-xcp-nav-toolbar .x-nbr .x-btn-xcp-nav-button-toolbar-small-focus .x-frame-br,
+.x-toolbar-xcp-nav-toolbar .x-nbr .x-btn-xcp-nav-button-toolbar-small-focus .x-frame-tc,
+.x-toolbar-xcp-nav-toolbar .x-nbr .x-btn-xcp-nav-button-toolbar-small-focus .x-frame-bc {
+  background-image: url('../../ext-4.1/resources/themes/images/default/btn/btn-xcp-nav-button-toolbar-small-focus-corners.gif');
+}
+/* line 919, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201309122354/WebContent/js/ext-4.1/resources/themes/stylesheets/ext4/default/widgets/_button.scss */
+.x-toolbar-xcp-nav-toolbar .x-nbr .x-btn-xcp-nav-button-toolbar-small-focus .x-frame-ml,
+.x-toolbar-xcp-nav-toolbar .x-nbr .x-btn-xcp-nav-button-toolbar-small-focus .x-frame-mr {
+  background-image: url('../../ext-4.1/resources/themes/images/default/btn/btn-xcp-nav-button-toolbar-small-focus-sides.gif');
+}
+/* line 922, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201309122354/WebContent/js/ext-4.1/resources/themes/stylesheets/ext4/default/widgets/_button.scss */
+.x-toolbar-xcp-nav-toolbar .x-nbr .x-btn-xcp-nav-button-toolbar-small-focus .x-frame-mc {
+  background-color: rgba(51, 153, 204, 0.25);
+  background-image: url('../../ext-4.1/resources/themes/images/default/btn/btn-xcp-nav-button-toolbar-small-focus-bg.gif');
+}
+/* line 937, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201309122354/WebContent/js/ext-4.1/resources/themes/stylesheets/ext4/default/widgets/_button.scss */
+.x-toolbar-xcp-nav-toolbar .x-nbr .x-btn-xcp-nav-button-toolbar-small-menu-active .x-frame-tl,
+.x-toolbar-xcp-nav-toolbar .x-nbr .x-btn-xcp-nav-button-toolbar-small-menu-active .x-frame-bl,
+.x-toolbar-xcp-nav-toolbar .x-nbr .x-btn-xcp-nav-button-toolbar-small-menu-active .x-frame-tr,
+.x-toolbar-xcp-nav-toolbar .x-nbr .x-btn-xcp-nav-button-toolbar-small-menu-active .x-frame-br,
+.x-toolbar-xcp-nav-toolbar .x-nbr .x-btn-xcp-nav-button-toolbar-small-menu-active .x-frame-tc,
+.x-toolbar-xcp-nav-toolbar .x-nbr .x-btn-xcp-nav-button-toolbar-small-menu-active .x-frame-bc,
+.x-toolbar-xcp-nav-toolbar .x-nbr .x-btn-xcp-nav-button-toolbar-small-pressed .x-frame-tl,
+.x-toolbar-xcp-nav-toolbar .x-nbr .x-btn-xcp-nav-button-toolbar-small-pressed .x-frame-bl,
+.x-toolbar-xcp-nav-toolbar .x-nbr .x-btn-xcp-nav-button-toolbar-small-pressed .x-frame-tr,
+.x-toolbar-xcp-nav-toolbar .x-nbr .x-btn-xcp-nav-button-toolbar-small-pressed .x-frame-br,
+.x-toolbar-xcp-nav-toolbar .x-nbr .x-btn-xcp-nav-button-toolbar-small-pressed .x-frame-tc,
+.x-toolbar-xcp-nav-toolbar .x-nbr .x-btn-xcp-nav-button-toolbar-small-pressed .x-frame-bc {
+  background-image: url('../../ext-4.1/resources/themes/images/default/btn/btn-xcp-nav-button-toolbar-small-pressed-corners.gif');
+}
+/* line 941, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201309122354/WebContent/js/ext-4.1/resources/themes/stylesheets/ext4/default/widgets/_button.scss */
+.x-toolbar-xcp-nav-toolbar .x-nbr .x-btn-xcp-nav-button-toolbar-small-menu-active .x-frame-ml,
+.x-toolbar-xcp-nav-toolbar .x-nbr .x-btn-xcp-nav-button-toolbar-small-menu-active .x-frame-mr,
+.x-toolbar-xcp-nav-toolbar .x-nbr .x-btn-xcp-nav-button-toolbar-small-pressed .x-frame-ml,
+.x-toolbar-xcp-nav-toolbar .x-nbr .x-btn-xcp-nav-button-toolbar-small-pressed .x-frame-mr {
+  background-image: url('../../ext-4.1/resources/themes/images/default/btn/btn-xcp-nav-button-toolbar-small-pressed-sides.gif');
+}
+/* line 944, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201309122354/WebContent/js/ext-4.1/resources/themes/stylesheets/ext4/default/widgets/_button.scss */
+.x-toolbar-xcp-nav-toolbar .x-nbr .x-btn-xcp-nav-button-toolbar-small-menu-active .x-frame-mc,
+.x-toolbar-xcp-nav-toolbar .x-nbr .x-btn-xcp-nav-button-toolbar-small-pressed .x-frame-mc {
+  background-color: none;
+  background-image: url('../../ext-4.1/resources/themes/images/default/btn/btn-xcp-nav-button-toolbar-small-pressed-bg.gif');
+}
+/* line 958, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201309122354/WebContent/js/ext-4.1/resources/themes/stylesheets/ext4/default/widgets/_button.scss */
+.x-toolbar-xcp-nav-toolbar .x-nbr .x-btn-xcp-nav-button-toolbar-small-disabled .x-frame-tl,
+.x-toolbar-xcp-nav-toolbar .x-nbr .x-btn-xcp-nav-button-toolbar-small-disabled .x-frame-bl,
+.x-toolbar-xcp-nav-toolbar .x-nbr .x-btn-xcp-nav-button-toolbar-small-disabled .x-frame-tr,
+.x-toolbar-xcp-nav-toolbar .x-nbr .x-btn-xcp-nav-button-toolbar-small-disabled .x-frame-br,
+.x-toolbar-xcp-nav-toolbar .x-nbr .x-btn-xcp-nav-button-toolbar-small-disabled .x-frame-tc,
+.x-toolbar-xcp-nav-toolbar .x-nbr .x-btn-xcp-nav-button-toolbar-small-disabled .x-frame-bc {
+  background-image: url('../../ext-4.1/resources/themes/images/default/btn/btn-xcp-nav-button-toolbar-small-disabled-corners.gif');
+}
+/* line 962, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201309122354/WebContent/js/ext-4.1/resources/themes/stylesheets/ext4/default/widgets/_button.scss */
+.x-toolbar-xcp-nav-toolbar .x-nbr .x-btn-xcp-nav-button-toolbar-small-disabled .x-frame-ml,
+.x-toolbar-xcp-nav-toolbar .x-nbr .x-btn-xcp-nav-button-toolbar-small-disabled .x-frame-mr {
+  background-image: url('../../ext-4.1/resources/themes/images/default/btn/btn-xcp-nav-button-toolbar-small-disabled-sides.gif');
+}
+/* line 965, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201309122354/WebContent/js/ext-4.1/resources/themes/stylesheets/ext4/default/widgets/_button.scss */
+.x-toolbar-xcp-nav-toolbar .x-nbr .x-btn-xcp-nav-button-toolbar-small-disabled .x-frame-mc {
+  background-color: transparent;
+  background-image: url('../../ext-4.1/resources/themes/images/default/btn/btn-xcp-nav-button-toolbar-small-disabled-bg.gif');
+}
+/* line 987, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201309122354/WebContent/js/ext-4.1/resources/themes/stylesheets/ext4/default/widgets/_button.scss */
+.x-toolbar-xcp-nav-toolbar .x-nlg .x-btn-xcp-nav-button-toolbar-small-over {
+  background-repeat: repeat-x;
+  background-image: url('../../ext-4.1/resources/themes/images/default/btn/btn-xcp-nav-button-toolbar-small-over-bg.gif');
+}
+/* line 996, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201309122354/WebContent/js/ext-4.1/resources/themes/stylesheets/ext4/default/widgets/_button.scss */
+.x-toolbar-xcp-nav-toolbar .x-nlg .x-btn-xcp-nav-button-toolbar-small-focus {
+  background-repeat: repeat-x;
+  background-image: url('../../ext-4.1/resources/themes/images/default/btn/btn-xcp-nav-button-toolbar-small-focus-bg.gif');
+}
+/* line 1006, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201309122354/WebContent/js/ext-4.1/resources/themes/stylesheets/ext4/default/widgets/_button.scss */
+.x-toolbar-xcp-nav-toolbar .x-nlg .x-btn-xcp-nav-button-toolbar-small-menu-active,
+.x-toolbar-xcp-nav-toolbar .x-nlg .x-btn-xcp-nav-button-toolbar-small-pressed {
+  background-repeat: repeat-x;
+  background-image: url('../../ext-4.1/resources/themes/images/default/btn/btn-xcp-nav-button-toolbar-small-pressed-bg.gif');
+}
+/* line 1015, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201309122354/WebContent/js/ext-4.1/resources/themes/stylesheets/ext4/default/widgets/_button.scss */
+.x-toolbar-xcp-nav-toolbar .x-nlg .x-btn-xcp-nav-button-toolbar-small-disabled {
+  background-repeat: repeat-x;
+  background-image: url('../../ext-4.1/resources/themes/images/default/btn/btn-xcp-nav-button-toolbar-small-disabled-bg.gif');
+}
+/* line 132, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201309122354/WebContent/js/resources/themes/stylesheets/xcp/default/widgets/_app-menu.scss */
+.x-toolbar-xcp-nav-toolbar .x-box-inner {
+  border-bottom: 1px white solid !important;
+}
+/* line 137, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201309122354/WebContent/js/resources/themes/stylesheets/xcp/default/widgets/_app-menu.scss */
+.x-toolbar-xcp-nav-toolbar .x-btn-default-toolbar-small {
+  background: none;
+}
+/* line 143, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201309122354/WebContent/js/resources/themes/stylesheets/xcp/default/widgets/_app-menu.scss */
+.x-toolbar-xcp-nav-toolbar .x-btn-xcp-nav-button-toolbar-small .x-btn-inner {
+  margin: 0 25px;
+}
+/* line 147, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201309122354/WebContent/js/resources/themes/stylesheets/xcp/default/widgets/_app-menu.scss */
+.x-toolbar-xcp-nav-toolbar .x-btn-xcp-nav-button-toolbar-small .x-btn-arrow-right .x-btn-inner {
+  margin-right: 15px;
+}
+/* line 152, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201309122354/WebContent/js/resources/themes/stylesheets/xcp/default/widgets/_app-menu.scss */
+.x-toolbar-xcp-nav-toolbar .x-btn-default-toolbar-small-over {
+  background: rgba(103, 158, 210, 0.5);
+}
+/* line 155, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201309122354/WebContent/js/resources/themes/stylesheets/xcp/default/widgets/_app-menu.scss */
+.x-toolbar-xcp-nav-toolbar .x-btn-default-toolbar-small-over .x-toolbar-more-icon {
+  background-image: url('../../ext-4.1/resources/themes/images/default/toolbar/nav_more_on.png') !important;
+}
+/* line 160, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201309122354/WebContent/js/resources/themes/stylesheets/xcp/default/widgets/_app-menu.scss */
+.x-toolbar-xcp-nav-toolbar .x-btn button {
+  vertical-align: middle;
+}
+/* line 167, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201309122354/WebContent/js/resources/themes/stylesheets/xcp/default/widgets/_app-menu.scss */
+.x-toolbar-xcp-nav-toolbar .x-btn-xcp-nav-button-toolbar-small-icon button,
+.x-toolbar-xcp-nav-toolbar .x-btn-xcp-nav-button-toolbar-small-icon .x-btn-inner,
+.x-toolbar-xcp-nav-toolbar .x-btn-xcp-nav-button-toolbar-small-noicon button,
+.x-toolbar-xcp-nav-toolbar .x-btn-xcp-nav-button-toolbar-small-noicon .x-btn-inner {
+  height: 18px;
+  line-height: 16px;
+}
+/* line 172, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201309122354/WebContent/js/resources/themes/stylesheets/xcp/default/widgets/_app-menu.scss */
+.x-toolbar-xcp-nav-toolbar .x-toolbar-more-icon {
+  background-image: url('../../ext-4.1/resources/themes/images/default/toolbar/nav_more_default.png') !important;
+  width: 8px !important;
+  background-repeat: no-repeat;
+  background-position: center !important;
+}
+/* line 179, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201309122354/WebContent/js/resources/themes/stylesheets/xcp/default/widgets/_app-menu.scss */
+.x-toolbar-xcp-nav-toolbar .x-btn-default-toolbar-small-icon .x-toolbar-more-icon {
+  left: 4px;
+}
+/* line 183, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201309122354/WebContent/js/resources/themes/stylesheets/xcp/default/widgets/_app-menu.scss */
+.x-toolbar-xcp-nav-toolbar .x-box-menu-right {
+  padding: 8px 0 6px 0;
+  float: left;
+}
+
+/* line 190, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201309122354/WebContent/js/resources/themes/stylesheets/xcp/default/widgets/_app-menu.scss */
+.xcp-master-header .x-toolbar-xcp-nav-toolbar {
+  border-bottom: none !important;
+}
+/* line 193, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201309122354/WebContent/js/resources/themes/stylesheets/xcp/default/widgets/_app-menu.scss */
+.xcp-master-header .x-toolbar-xcp-nav-toolbar .x-box-inner {
+  border-bottom: none !important;
+}
+
+/* line 200, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201309122354/WebContent/js/resources/themes/stylesheets/xcp/default/widgets/_app-menu.scss */
+.x-nlg .x-toolbar-xcp-nav-toolbar {
+  background-image: none;
+  filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, startColorstr='#3e3e3e', endColorstr='black');
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#3e3e3e', endColorstr='black')";
+}
+/* line 205, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201309122354/WebContent/js/resources/themes/stylesheets/xcp/default/widgets/_app-menu.scss */
+.x-nlg .xcp-master-header .x-toolbar-xcp-nav-toolbar {
+  background: none;
+}
+
+/* line 214, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/plugins/com.emc.xcp.uitemplate.ui_1.0.0.201309122354/WebContent/js/resources/themes/stylesheets/xcp/default/widgets/_app-menu.scss */
+.x-nbr .x-toolbar-xcp-nav-toolbar .x-btn-default-toolbar-small-over .x-frame-mc {
+  background-color: transparent;
+}
+
+/******************************
+  BUTTONS                    */
+/* line 119, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/Applications/gta/.metadata/.plugins/com.emc.xcp.uitemplate.ui/resources/custom-themes/xcptcln.CleanTheme-1.0.0.jar/cleantheme.scss */
+.x-btn-default-small {
+  font-size: 10px;
+  padding: 0.5em 1.5em;
+  display: inline-block;
+  cursor: pointer;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -o-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -khtml-border-radius: 5px;
+  border-radius: 5px;
+  *zoom: 1;
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#800C5AA6', endColorstr='#80052647');
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(64, 154, 241, 0.5)), color-stop(50%, rgba(12, 90, 166, 0.5)), color-stop(100%, #0c5aa6));
+  background: -webkit-linear-gradient(rgba(64, 154, 241, 0.5), rgba(12, 90, 166, 0.5) 50%, #0c5aa6);
+  background: -moz-linear-gradient(rgba(64, 154, 241, 0.5), rgba(12, 90, 166, 0.5) 50%, #0c5aa6);
+  background: -o-linear-gradient(rgba(64, 154, 241, 0.5), rgba(12, 90, 166, 0.5) 50%, #0c5aa6);
+  background: -ms-linear-gradient(rgba(64, 154, 241, 0.5), rgba(12, 90, 166, 0.5) 50%, #0c5aa6);
+  background: linear-gradient(rgba(64, 154, 241, 0.5), rgba(12, 90, 166, 0.5) 50%, #0c5aa6);
+  -moz-box-shadow: rgba(136, 192, 246, 0.5) 0 1px 0 inset;
+  -webkit-box-shadow: rgba(136, 192, 246, 0.5) 0 1px 0 inset;
+  -o-box-shadow: rgba(136, 192, 246, 0.5) 0 1px 0 inset;
+  box-shadow: rgba(136, 192, 246, 0.5) 0 1px 0 inset;
+  border: 1px solid #0a4d8e;
+  color: white;
+}
+/* line 15, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/Applications/gta/.metadata/.plugins/com.emc.xcp.uitemplate.ui/resources/custom-themes/xcptcln.CleanTheme-1.0.0.jar/sassy/sassy-buttons/_sassy-button-pseudo-states.sass */
+.x-btn-default-small:hover {
+  text-decoration: none;
+}
+/* line 24, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/Applications/gta/.metadata/.plugins/com.emc.xcp.uitemplate.ui/resources/custom-themes/xcptcln.CleanTheme-1.0.0.jar/sassy/sassy-buttons/_sassy-button-pseudo-states.sass */
+.x-btn-default-small:hover {
+  background-color: #0c5aa6;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(55, 149, 241, 0.5)), color-stop(50%, #0c5aa6), color-stop(100%, #094580));
+  background: -webkit-linear-gradient(rgba(55, 149, 241, 0.5), #0c5aa6 50%, #094580);
+  background: -moz-linear-gradient(rgba(55, 149, 241, 0.5), #0c5aa6 50%, #094580);
+  background: -o-linear-gradient(rgba(55, 149, 241, 0.5), #0c5aa6 50%, #094580);
+  background: -ms-linear-gradient(rgba(55, 149, 241, 0.5), #0c5aa6 50%, #094580);
+  background: linear-gradient(rgba(55, 149, 241, 0.5), #0c5aa6 50%, #094580);
+}
+/* line 27, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/Applications/gta/.metadata/.plugins/com.emc.xcp.uitemplate.ui/resources/custom-themes/xcptcln.CleanTheme-1.0.0.jar/sassy/sassy-buttons/_sassy-button-pseudo-states.sass */
+.x-btn-default-small:active {
+  -moz-box-shadow: #094580 0 1px 2px inset;
+  -webkit-box-shadow: #094580 0 1px 2px inset;
+  -o-box-shadow: #094580 0 1px 2px inset;
+  box-shadow: #094580 0 1px 2px inset;
+}
+/* line 6, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/Applications/gta/.metadata/.plugins/com.emc.xcp.uitemplate.ui/resources/custom-themes/xcptcln.CleanTheme-1.0.0.jar/sassy/sassy-buttons/_sassy-button-pseudo-states.sass */
+.x-btn-default-small.disabled, .x-btn-default-small[disabled] {
+  opacity: 0.6;
+  background: #0c5aa6;
+  cursor: default;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  -o-box-shadow: none;
+  box-shadow: none;
+}
+/* line 73, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/Applications/gta/.metadata/.plugins/com.emc.xcp.uitemplate.ui/resources/custom-themes/xcptcln.CleanTheme-1.0.0.jar/sassy/_sassy-buttons.sass */
+.x-btn-default-small::-moz-focus-inner {
+  padding: 0 !important;
+  margin: -1px !important;
+}
+
+/* line 122, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/Applications/gta/.metadata/.plugins/com.emc.xcp.uitemplate.ui/resources/custom-themes/xcptcln.CleanTheme-1.0.0.jar/cleantheme.scss */
+.button-action .x-btn-default-small {
+  font-size: 10px;
+  padding: 0.5em 1.5em;
+  display: inline-block;
+  cursor: pointer;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -o-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -khtml-border-radius: 5px;
+  border-radius: 5px;
+  *zoom: 1;
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FFFFC673', endColorstr='#FFFF9C0D');
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #fffaf3), color-stop(50%, #ffc673), color-stop(100%, #ff9700));
+  background: -webkit-linear-gradient(#fffaf3, #ffc673 50%, #ff9700);
+  background: -moz-linear-gradient(#fffaf3, #ffc673 50%, #ff9700);
+  background: -o-linear-gradient(#fffaf3, #ffc673 50%, #ff9700);
+  background: -ms-linear-gradient(#fffaf3, #ffc673 50%, #ff9700);
+  background: linear-gradient(#fffaf3, #ffc673 50%, #ff9700);
+  -moz-box-shadow: white 0 1px 0 inset;
+  -webkit-box-shadow: white 0 1px 0 inset;
+  -o-box-shadow: white 0 1px 0 inset;
+  box-shadow: white 0 1px 0 inset;
+  border: 1px solid #e68800;
+  color: white;
+}
+/* line 15, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/Applications/gta/.metadata/.plugins/com.emc.xcp.uitemplate.ui/resources/custom-themes/xcptcln.CleanTheme-1.0.0.jar/sassy/sassy-buttons/_sassy-button-pseudo-states.sass */
+.button-action .x-btn-default-small:hover {
+  text-decoration: none;
+}
+/* line 24, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/Applications/gta/.metadata/.plugins/com.emc.xcp.uitemplate.ui/resources/custom-themes/xcptcln.CleanTheme-1.0.0.jar/sassy/sassy-buttons/_sassy-button-pseudo-states.sass */
+.button-action .x-btn-default-small:hover {
+  background-color: #ff9700;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #fff6e8), color-stop(50%, #ff9700), color-stop(100%, #d67f00));
+  background: -webkit-linear-gradient(#fff6e8, #ff9700 50%, #d67f00);
+  background: -moz-linear-gradient(#fff6e8, #ff9700 50%, #d67f00);
+  background: -o-linear-gradient(#fff6e8, #ff9700 50%, #d67f00);
+  background: -ms-linear-gradient(#fff6e8, #ff9700 50%, #d67f00);
+  background: linear-gradient(#fff6e8, #ff9700 50%, #d67f00);
+}
+/* line 27, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/Applications/gta/.metadata/.plugins/com.emc.xcp.uitemplate.ui/resources/custom-themes/xcptcln.CleanTheme-1.0.0.jar/sassy/sassy-buttons/_sassy-button-pseudo-states.sass */
+.button-action .x-btn-default-small:active {
+  -moz-box-shadow: #d67f00 0 1px 2px inset;
+  -webkit-box-shadow: #d67f00 0 1px 2px inset;
+  -o-box-shadow: #d67f00 0 1px 2px inset;
+  box-shadow: #d67f00 0 1px 2px inset;
+}
+/* line 6, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/Applications/gta/.metadata/.plugins/com.emc.xcp.uitemplate.ui/resources/custom-themes/xcptcln.CleanTheme-1.0.0.jar/sassy/sassy-buttons/_sassy-button-pseudo-states.sass */
+.button-action .x-btn-default-small.disabled, .button-action .x-btn-default-small[disabled] {
+  opacity: 0.6;
+  background: #ff9700;
+  cursor: default;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  -o-box-shadow: none;
+  box-shadow: none;
+}
+/* line 73, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/Applications/gta/.metadata/.plugins/com.emc.xcp.uitemplate.ui/resources/custom-themes/xcptcln.CleanTheme-1.0.0.jar/sassy/_sassy-buttons.sass */
+.button-action .x-btn-default-small::-moz-focus-inner {
+  padding: 0 !important;
+  margin: -1px !important;
+}
+
+/* line 123, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/Applications/gta/.metadata/.plugins/com.emc.xcp.uitemplate.ui/resources/custom-themes/xcptcln.CleanTheme-1.0.0.jar/cleantheme.scss */
+.button-action .x-btn-default-small .x-btn-inner {
+  color: black;
+}
+
+/* line 126, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/Applications/gta/.metadata/.plugins/com.emc.xcp.uitemplate.ui/resources/custom-themes/xcptcln.CleanTheme-1.0.0.jar/cleantheme.scss */
+.button-large .x-btn-default-small {
+  font-size: 20px;
+  padding: 0.5em 1.5em;
+  display: inline-block;
+  cursor: pointer;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -o-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -khtml-border-radius: 10px;
+  border-radius: 10px;
+  *zoom: 1;
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FFFFC673', endColorstr='#FFFF9C0D');
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #fffaf3), color-stop(50%, #ffc673), color-stop(100%, #ff9700));
+  background: -webkit-linear-gradient(#fffaf3, #ffc673 50%, #ff9700);
+  background: -moz-linear-gradient(#fffaf3, #ffc673 50%, #ff9700);
+  background: -o-linear-gradient(#fffaf3, #ffc673 50%, #ff9700);
+  background: -ms-linear-gradient(#fffaf3, #ffc673 50%, #ff9700);
+  background: linear-gradient(#fffaf3, #ffc673 50%, #ff9700);
+  -moz-box-shadow: white 0 1px 0 inset;
+  -webkit-box-shadow: white 0 1px 0 inset;
+  -o-box-shadow: white 0 1px 0 inset;
+  box-shadow: white 0 1px 0 inset;
+  border: 1px solid #e68800;
+  color: white;
+}
+/* line 15, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/Applications/gta/.metadata/.plugins/com.emc.xcp.uitemplate.ui/resources/custom-themes/xcptcln.CleanTheme-1.0.0.jar/sassy/sassy-buttons/_sassy-button-pseudo-states.sass */
+.button-large .x-btn-default-small:hover {
+  text-decoration: none;
+}
+/* line 24, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/Applications/gta/.metadata/.plugins/com.emc.xcp.uitemplate.ui/resources/custom-themes/xcptcln.CleanTheme-1.0.0.jar/sassy/sassy-buttons/_sassy-button-pseudo-states.sass */
+.button-large .x-btn-default-small:hover {
+  background-color: #ff9700;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #fff6e8), color-stop(50%, #ff9700), color-stop(100%, #d67f00));
+  background: -webkit-linear-gradient(#fff6e8, #ff9700 50%, #d67f00);
+  background: -moz-linear-gradient(#fff6e8, #ff9700 50%, #d67f00);
+  background: -o-linear-gradient(#fff6e8, #ff9700 50%, #d67f00);
+  background: -ms-linear-gradient(#fff6e8, #ff9700 50%, #d67f00);
+  background: linear-gradient(#fff6e8, #ff9700 50%, #d67f00);
+}
+/* line 27, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/Applications/gta/.metadata/.plugins/com.emc.xcp.uitemplate.ui/resources/custom-themes/xcptcln.CleanTheme-1.0.0.jar/sassy/sassy-buttons/_sassy-button-pseudo-states.sass */
+.button-large .x-btn-default-small:active {
+  -moz-box-shadow: #d67f00 0 1px 2px inset;
+  -webkit-box-shadow: #d67f00 0 1px 2px inset;
+  -o-box-shadow: #d67f00 0 1px 2px inset;
+  box-shadow: #d67f00 0 1px 2px inset;
+}
+/* line 6, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/Applications/gta/.metadata/.plugins/com.emc.xcp.uitemplate.ui/resources/custom-themes/xcptcln.CleanTheme-1.0.0.jar/sassy/sassy-buttons/_sassy-button-pseudo-states.sass */
+.button-large .x-btn-default-small.disabled, .button-large .x-btn-default-small[disabled] {
+  opacity: 0.6;
+  background: #ff9700;
+  cursor: default;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  -o-box-shadow: none;
+  box-shadow: none;
+}
+/* line 73, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/Applications/gta/.metadata/.plugins/com.emc.xcp.uitemplate.ui/resources/custom-themes/xcptcln.CleanTheme-1.0.0.jar/sassy/_sassy-buttons.sass */
+.button-large .x-btn-default-small::-moz-focus-inner {
+  padding: 0 !important;
+  margin: -1px !important;
+}
+
+/* line 127, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/Applications/gta/.metadata/.plugins/com.emc.xcp.uitemplate.ui/resources/custom-themes/xcptcln.CleanTheme-1.0.0.jar/cleantheme.scss */
+.button-large .x-btn-default-small .x-btn-inner {
+  font-size: 14px;
+  color: black;
+}
+
+/* line 130, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/Applications/gta/.metadata/.plugins/com.emc.xcp.uitemplate.ui/resources/custom-themes/xcptcln.CleanTheme-1.0.0.jar/cleantheme.scss */
+.button-small .x-btn-default-small {
+  font-size: 3px;
+  padding: 0.5em 1.5em;
+  display: inline-block;
+  cursor: pointer;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -o-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -khtml-border-radius: 3px;
+  border-radius: 3px;
+  *zoom: 1;
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#40679ED2', endColorstr='#40306BA3');
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(201, 221, 239, 0.25)), color-stop(50%, rgba(103, 158, 210, 0.25)), color-stop(100%, rgba(103, 158, 210, 0.5)));
+  background: -webkit-linear-gradient(rgba(201, 221, 239, 0.25), rgba(103, 158, 210, 0.25) 50%, rgba(103, 158, 210, 0.5));
+  background: -moz-linear-gradient(rgba(201, 221, 239, 0.25), rgba(103, 158, 210, 0.25) 50%, rgba(103, 158, 210, 0.5));
+  background: -o-linear-gradient(rgba(201, 221, 239, 0.25), rgba(103, 158, 210, 0.25) 50%, rgba(103, 158, 210, 0.5));
+  background: -ms-linear-gradient(rgba(201, 221, 239, 0.25), rgba(103, 158, 210, 0.25) 50%, rgba(103, 158, 210, 0.5));
+  background: linear-gradient(rgba(201, 221, 239, 0.25), rgba(103, 158, 210, 0.25) 50%, rgba(103, 158, 210, 0.5));
+  -moz-box-shadow: rgba(255, 255, 255, 0.25) 0 1px 0 inset;
+  -webkit-box-shadow: rgba(255, 255, 255, 0.25) 0 1px 0 inset;
+  -o-box-shadow: rgba(255, 255, 255, 0.25) 0 1px 0 inset;
+  box-shadow: rgba(255, 255, 255, 0.25) 0 1px 0 inset;
+  border: 1px solid rgba(83, 145, 204, 0.5);
+  color: white;
+}
+/* line 15, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/Applications/gta/.metadata/.plugins/com.emc.xcp.uitemplate.ui/resources/custom-themes/xcptcln.CleanTheme-1.0.0.jar/sassy/sassy-buttons/_sassy-button-pseudo-states.sass */
+.button-small .x-btn-default-small:hover {
+  text-decoration: none;
+}
+/* line 24, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/Applications/gta/.metadata/.plugins/com.emc.xcp.uitemplate.ui/resources/custom-themes/xcptcln.CleanTheme-1.0.0.jar/sassy/sassy-buttons/_sassy-button-pseudo-states.sass */
+.button-small .x-btn-default-small:hover {
+  background-color: rgba(103, 158, 210, 0.5);
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(194, 216, 237, 0.25)), color-stop(50%, rgba(103, 158, 210, 0.5)), color-stop(100%, rgba(72, 138, 201, 0.5)));
+  background: -webkit-linear-gradient(rgba(194, 216, 237, 0.25), rgba(103, 158, 210, 0.5) 50%, rgba(72, 138, 201, 0.5));
+  background: -moz-linear-gradient(rgba(194, 216, 237, 0.25), rgba(103, 158, 210, 0.5) 50%, rgba(72, 138, 201, 0.5));
+  background: -o-linear-gradient(rgba(194, 216, 237, 0.25), rgba(103, 158, 210, 0.5) 50%, rgba(72, 138, 201, 0.5));
+  background: -ms-linear-gradient(rgba(194, 216, 237, 0.25), rgba(103, 158, 210, 0.5) 50%, rgba(72, 138, 201, 0.5));
+  background: linear-gradient(rgba(194, 216, 237, 0.25), rgba(103, 158, 210, 0.5) 50%, rgba(72, 138, 201, 0.5));
+}
+/* line 27, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/Applications/gta/.metadata/.plugins/com.emc.xcp.uitemplate.ui/resources/custom-themes/xcptcln.CleanTheme-1.0.0.jar/sassy/sassy-buttons/_sassy-button-pseudo-states.sass */
+.button-small .x-btn-default-small:active {
+  -moz-box-shadow: rgba(72, 138, 201, 0.5) 0 1px 2px inset;
+  -webkit-box-shadow: rgba(72, 138, 201, 0.5) 0 1px 2px inset;
+  -o-box-shadow: rgba(72, 138, 201, 0.5) 0 1px 2px inset;
+  box-shadow: rgba(72, 138, 201, 0.5) 0 1px 2px inset;
+}
+/* line 6, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/Applications/gta/.metadata/.plugins/com.emc.xcp.uitemplate.ui/resources/custom-themes/xcptcln.CleanTheme-1.0.0.jar/sassy/sassy-buttons/_sassy-button-pseudo-states.sass */
+.button-small .x-btn-default-small.disabled, .button-small .x-btn-default-small[disabled] {
+  opacity: 0.6;
+  background: rgba(103, 158, 210, 0.5);
+  cursor: default;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  -o-box-shadow: none;
+  box-shadow: none;
+}
+/* line 73, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/Applications/gta/.metadata/.plugins/com.emc.xcp.uitemplate.ui/resources/custom-themes/xcptcln.CleanTheme-1.0.0.jar/sassy/_sassy-buttons.sass */
+.button-small .x-btn-default-small::-moz-focus-inner {
+  padding: 0 !important;
+  margin: -1px !important;
+}
+
+/* line 131, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/Applications/gta/.metadata/.plugins/com.emc.xcp.uitemplate.ui/resources/custom-themes/xcptcln.CleanTheme-1.0.0.jar/cleantheme.scss */
+.button-small .x-btn-default-small .x-btn-inner {
+  font-size: 10px;
+  color: black;
+}
+
+/* line 134, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/Applications/gta/.metadata/.plugins/com.emc.xcp.uitemplate.ui/resources/custom-themes/xcptcln.CleanTheme-1.0.0.jar/cleantheme.scss */
+.xcp-selector-contextmenu .x-btn-default-small {
+  background: none;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  -o-box-shadow: none;
+  box-shadow: none;
+}
+
+/******************************
+  COLUMN BOXES               	
+*/
+/* line 141, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/Applications/gta/.metadata/.plugins/com.emc.xcp.uitemplate.ui/resources/custom-themes/xcptcln.CleanTheme-1.0.0.jar/cleantheme.scss */
+.x-panel-header-xcp-column-box-ui {
+  background-image: none;
+  padding-left: 8px;
+  padding-top: 10px;
+  height: auto;
+}
+
+/***************
+ COMBINED
+*/
+/* line 149, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/Applications/gta/.metadata/.plugins/com.emc.xcp.uitemplate.ui/resources/custom-themes/xcptcln.CleanTheme-1.0.0.jar/cleantheme.scss */
+.grey-down .x-panel-header {
+  margin-left: 0px;
+}
+
+/* line 150, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/Applications/gta/.metadata/.plugins/com.emc.xcp.uitemplate.ui/resources/custom-themes/xcptcln.CleanTheme-1.0.0.jar/cleantheme.scss */
+.grey-down .x-panel-header-xcp-column-box-ui {
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(153, 153, 153, 0.25)), color-stop(100%, rgba(153, 153, 153, 0.1)));
+  background-image: -webkit-linear-gradient(top, rgba(153, 153, 153, 0.25), rgba(153, 153, 153, 0.1));
+  background-image: -moz-linear-gradient(top, rgba(153, 153, 153, 0.25), rgba(153, 153, 153, 0.1));
+  background-image: -o-linear-gradient(top, rgba(153, 153, 153, 0.25), rgba(153, 153, 153, 0.1));
+  background-image: -ms-linear-gradient(top, rgba(153, 153, 153, 0.25), rgba(153, 153, 153, 0.1));
+  background-image: linear-gradient(top, rgba(153, 153, 153, 0.25), rgba(153, 153, 153, 0.1));
+}
+
+/* line 152, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/Applications/gta/.metadata/.plugins/com.emc.xcp.uitemplate.ui/resources/custom-themes/xcptcln.CleanTheme-1.0.0.jar/cleantheme.scss */
+.grey-down .x-panel-body-xcp-column-box-ui {
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(153, 153, 153, 0.1)), color-stop(100%, rgba(255, 255, 255, 0.005)));
+  background-image: -webkit-linear-gradient(top, rgba(153, 153, 153, 0.1), rgba(255, 255, 255, 0.005));
+  background-image: -moz-linear-gradient(top, rgba(153, 153, 153, 0.1), rgba(255, 255, 255, 0.005));
+  background-image: -o-linear-gradient(top, rgba(153, 153, 153, 0.1), rgba(255, 255, 255, 0.005));
+  background-image: -ms-linear-gradient(top, rgba(153, 153, 153, 0.1), rgba(255, 255, 255, 0.005));
+  background-image: linear-gradient(top, rgba(153, 153, 153, 0.1), rgba(255, 255, 255, 0.005));
+}
+
+/* line 155, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/Applications/gta/.metadata/.plugins/com.emc.xcp.uitemplate.ui/resources/custom-themes/xcptcln.CleanTheme-1.0.0.jar/cleantheme.scss */
+.grey-up .x-panel-header {
+  margin-left: 0px;
+}
+
+/* line 156, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/Applications/gta/.metadata/.plugins/com.emc.xcp.uitemplate.ui/resources/custom-themes/xcptcln.CleanTheme-1.0.0.jar/cleantheme.scss */
+.grey-up .x-panel-header-xcp-column-box-ui {
+  background-image: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(0%, rgba(153, 153, 153, 0.1)), color-stop(100%, rgba(255, 255, 255, 0.005)));
+  background-image: -webkit-linear-gradient(bottom, rgba(153, 153, 153, 0.1), rgba(255, 255, 255, 0.005));
+  background-image: -moz-linear-gradient(bottom, rgba(153, 153, 153, 0.1), rgba(255, 255, 255, 0.005));
+  background-image: -o-linear-gradient(bottom, rgba(153, 153, 153, 0.1), rgba(255, 255, 255, 0.005));
+  background-image: -ms-linear-gradient(bottom, rgba(153, 153, 153, 0.1), rgba(255, 255, 255, 0.005));
+  background-image: linear-gradient(bottom, rgba(153, 153, 153, 0.1), rgba(255, 255, 255, 0.005));
+}
+
+/* line 158, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/Applications/gta/.metadata/.plugins/com.emc.xcp.uitemplate.ui/resources/custom-themes/xcptcln.CleanTheme-1.0.0.jar/cleantheme.scss */
+.grey-up .x-panel-body-xcp-column-box-ui {
+  background-image: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(0%, rgba(153, 153, 153, 0.25)), color-stop(100%, rgba(153, 153, 153, 0.1)));
+  background-image: -webkit-linear-gradient(bottom, rgba(153, 153, 153, 0.25), rgba(153, 153, 153, 0.1));
+  background-image: -moz-linear-gradient(bottom, rgba(153, 153, 153, 0.25), rgba(153, 153, 153, 0.1));
+  background-image: -o-linear-gradient(bottom, rgba(153, 153, 153, 0.25), rgba(153, 153, 153, 0.1));
+  background-image: -ms-linear-gradient(bottom, rgba(153, 153, 153, 0.25), rgba(153, 153, 153, 0.1));
+  background-image: linear-gradient(bottom, rgba(153, 153, 153, 0.25), rgba(153, 153, 153, 0.1));
+}
+
+/* line 162, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/Applications/gta/.metadata/.plugins/com.emc.xcp.uitemplate.ui/resources/custom-themes/xcptcln.CleanTheme-1.0.0.jar/cleantheme.scss */
+.comp-dark-down .x-panel-header {
+  margin-left: 0px;
+}
+
+/* line 163, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/Applications/gta/.metadata/.plugins/com.emc.xcp.uitemplate.ui/resources/custom-themes/xcptcln.CleanTheme-1.0.0.jar/cleantheme.scss */
+.comp-dark-down .x-panel-header-xcp-column-box-ui {
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ff9700), color-stop(100%, #ffc673));
+  background-image: -webkit-linear-gradient(top, #ff9700, #ffc673);
+  background-image: -moz-linear-gradient(top, #ff9700, #ffc673);
+  background-image: -o-linear-gradient(top, #ff9700, #ffc673);
+  background-image: -ms-linear-gradient(top, #ff9700, #ffc673);
+  background-image: linear-gradient(top, #ff9700, #ffc673);
+}
+
+/* line 165, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/Applications/gta/.metadata/.plugins/com.emc.xcp.uitemplate.ui/resources/custom-themes/xcptcln.CleanTheme-1.0.0.jar/cleantheme.scss */
+.comp-dark-down .x-panel-body-xcp-column-box-ui {
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffc673), color-stop(100%, rgba(255, 198, 115, 0.1)));
+  background-image: -webkit-linear-gradient(top, #ffc673, rgba(255, 198, 115, 0.1));
+  background-image: -moz-linear-gradient(top, #ffc673, rgba(255, 198, 115, 0.1));
+  background-image: -o-linear-gradient(top, #ffc673, rgba(255, 198, 115, 0.1));
+  background-image: -ms-linear-gradient(top, #ffc673, rgba(255, 198, 115, 0.1));
+  background-image: linear-gradient(top, #ffc673, rgba(255, 198, 115, 0.1));
+}
+
+/* line 168, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/Applications/gta/.metadata/.plugins/com.emc.xcp.uitemplate.ui/resources/custom-themes/xcptcln.CleanTheme-1.0.0.jar/cleantheme.scss */
+.comp-dark-up .x-panel-header {
+  margin-left: 0px;
+}
+
+/* line 169, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/Applications/gta/.metadata/.plugins/com.emc.xcp.uitemplate.ui/resources/custom-themes/xcptcln.CleanTheme-1.0.0.jar/cleantheme.scss */
+.comp-dark-up .x-panel-header-xcp-column-box-ui {
+  background-image: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(0%, #ffc673), color-stop(100%, rgba(255, 198, 115, 0.1)));
+  background-image: -webkit-linear-gradient(bottom, #ffc673, rgba(255, 198, 115, 0.1));
+  background-image: -moz-linear-gradient(bottom, #ffc673, rgba(255, 198, 115, 0.1));
+  background-image: -o-linear-gradient(bottom, #ffc673, rgba(255, 198, 115, 0.1));
+  background-image: -ms-linear-gradient(bottom, #ffc673, rgba(255, 198, 115, 0.1));
+  background-image: linear-gradient(bottom, #ffc673, rgba(255, 198, 115, 0.1));
+}
+
+/* line 171, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/Applications/gta/.metadata/.plugins/com.emc.xcp.uitemplate.ui/resources/custom-themes/xcptcln.CleanTheme-1.0.0.jar/cleantheme.scss */
+.comp-dark-up .x-panel-body-xcp-column-box-ui {
+  background-image: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(0%, #ff9700), color-stop(100%, #ffc673));
+  background-image: -webkit-linear-gradient(bottom, #ff9700, #ffc673);
+  background-image: -moz-linear-gradient(bottom, #ff9700, #ffc673);
+  background-image: -o-linear-gradient(bottom, #ff9700, #ffc673);
+  background-image: -ms-linear-gradient(bottom, #ff9700, #ffc673);
+  background-image: linear-gradient(bottom, #ff9700, #ffc673);
+}
+
+/* line 175, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/Applications/gta/.metadata/.plugins/com.emc.xcp.uitemplate.ui/resources/custom-themes/xcptcln.CleanTheme-1.0.0.jar/cleantheme.scss */
+.comp-light-down .x-panel-header {
+  margin-left: 0px;
+}
+
+/* line 176, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/Applications/gta/.metadata/.plugins/com.emc.xcp.uitemplate.ui/resources/custom-themes/xcptcln.CleanTheme-1.0.0.jar/cleantheme.scss */
+.comp-light-down .x-panel-header-xcp-column-box-ui {
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffc673), color-stop(100%, rgba(255, 198, 115, 0.1)));
+  background-image: -webkit-linear-gradient(top, #ffc673, rgba(255, 198, 115, 0.1));
+  background-image: -moz-linear-gradient(top, #ffc673, rgba(255, 198, 115, 0.1));
+  background-image: -o-linear-gradient(top, #ffc673, rgba(255, 198, 115, 0.1));
+  background-image: -ms-linear-gradient(top, #ffc673, rgba(255, 198, 115, 0.1));
+  background-image: linear-gradient(top, #ffc673, rgba(255, 198, 115, 0.1));
+}
+
+/* line 178, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/Applications/gta/.metadata/.plugins/com.emc.xcp.uitemplate.ui/resources/custom-themes/xcptcln.CleanTheme-1.0.0.jar/cleantheme.scss */
+.comp-light-down .x-panel-body-xcp-column-box-ui {
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(255, 198, 115, 0.1)), color-stop(100%, rgba(255, 255, 255, 0.005)));
+  background-image: -webkit-linear-gradient(top, rgba(255, 198, 115, 0.1), rgba(255, 255, 255, 0.005));
+  background-image: -moz-linear-gradient(top, rgba(255, 198, 115, 0.1), rgba(255, 255, 255, 0.005));
+  background-image: -o-linear-gradient(top, rgba(255, 198, 115, 0.1), rgba(255, 255, 255, 0.005));
+  background-image: -ms-linear-gradient(top, rgba(255, 198, 115, 0.1), rgba(255, 255, 255, 0.005));
+  background-image: linear-gradient(top, rgba(255, 198, 115, 0.1), rgba(255, 255, 255, 0.005));
+}
+
+/* line 181, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/Applications/gta/.metadata/.plugins/com.emc.xcp.uitemplate.ui/resources/custom-themes/xcptcln.CleanTheme-1.0.0.jar/cleantheme.scss */
+.comp-light-up .x-panel-header {
+  margin-left: 0px;
+}
+
+/* line 182, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/Applications/gta/.metadata/.plugins/com.emc.xcp.uitemplate.ui/resources/custom-themes/xcptcln.CleanTheme-1.0.0.jar/cleantheme.scss */
+.comp-light-up .x-panel-header-xcp-column-box-ui {
+  background-image: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(0%, rgba(255, 198, 115, 0.1)), color-stop(100%, rgba(255, 255, 255, 0.005)));
+  background-image: -webkit-linear-gradient(bottom, rgba(255, 198, 115, 0.1), rgba(255, 255, 255, 0.005));
+  background-image: -moz-linear-gradient(bottom, rgba(255, 198, 115, 0.1), rgba(255, 255, 255, 0.005));
+  background-image: -o-linear-gradient(bottom, rgba(255, 198, 115, 0.1), rgba(255, 255, 255, 0.005));
+  background-image: -ms-linear-gradient(bottom, rgba(255, 198, 115, 0.1), rgba(255, 255, 255, 0.005));
+  background-image: linear-gradient(bottom, rgba(255, 198, 115, 0.1), rgba(255, 255, 255, 0.005));
+}
+
+/* line 184, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/Applications/gta/.metadata/.plugins/com.emc.xcp.uitemplate.ui/resources/custom-themes/xcptcln.CleanTheme-1.0.0.jar/cleantheme.scss */
+.comp-light-up .x-panel-body-xcp-column-box-ui {
+  background-image: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(0%, #ffc673), color-stop(100%, rgba(255, 198, 115, 0.1)));
+  background-image: -webkit-linear-gradient(bottom, #ffc673, rgba(255, 198, 115, 0.1));
+  background-image: -moz-linear-gradient(bottom, #ffc673, rgba(255, 198, 115, 0.1));
+  background-image: -o-linear-gradient(bottom, #ffc673, rgba(255, 198, 115, 0.1));
+  background-image: -ms-linear-gradient(bottom, #ffc673, rgba(255, 198, 115, 0.1));
+  background-image: linear-gradient(bottom, #ffc673, rgba(255, 198, 115, 0.1));
+}
+
+/* line 188, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/Applications/gta/.metadata/.plugins/com.emc.xcp.uitemplate.ui/resources/custom-themes/xcptcln.CleanTheme-1.0.0.jar/cleantheme.scss */
+.main-dark-down .x-panel-header {
+  margin-left: 0px;
+}
+
+/* line 189, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/Applications/gta/.metadata/.plugins/com.emc.xcp.uitemplate.ui/resources/custom-themes/xcptcln.CleanTheme-1.0.0.jar/cleantheme.scss */
+.main-dark-down .x-panel-header-xcp-column-box-ui {
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #0c5aa6), color-stop(100%, #679ed2));
+  background-image: -webkit-linear-gradient(top, #0c5aa6, #679ed2);
+  background-image: -moz-linear-gradient(top, #0c5aa6, #679ed2);
+  background-image: -o-linear-gradient(top, #0c5aa6, #679ed2);
+  background-image: -ms-linear-gradient(top, #0c5aa6, #679ed2);
+  background-image: linear-gradient(top, #0c5aa6, #679ed2);
+}
+
+/* line 191, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/Applications/gta/.metadata/.plugins/com.emc.xcp.uitemplate.ui/resources/custom-themes/xcptcln.CleanTheme-1.0.0.jar/cleantheme.scss */
+.main-dark-down .x-panel-body-xcp-column-box-ui {
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #679ed2), color-stop(100%, rgba(103, 158, 210, 0.1)));
+  background-image: -webkit-linear-gradient(top, #679ed2, rgba(103, 158, 210, 0.1));
+  background-image: -moz-linear-gradient(top, #679ed2, rgba(103, 158, 210, 0.1));
+  background-image: -o-linear-gradient(top, #679ed2, rgba(103, 158, 210, 0.1));
+  background-image: -ms-linear-gradient(top, #679ed2, rgba(103, 158, 210, 0.1));
+  background-image: linear-gradient(top, #679ed2, rgba(103, 158, 210, 0.1));
+}
+
+/* line 194, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/Applications/gta/.metadata/.plugins/com.emc.xcp.uitemplate.ui/resources/custom-themes/xcptcln.CleanTheme-1.0.0.jar/cleantheme.scss */
+.main-dark-up .x-panel-header {
+  margin-left: 0px;
+}
+
+/* line 195, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/Applications/gta/.metadata/.plugins/com.emc.xcp.uitemplate.ui/resources/custom-themes/xcptcln.CleanTheme-1.0.0.jar/cleantheme.scss */
+.main-dark-up .x-panel-header-xcp-column-box-ui {
+  background-image: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(0%, #679ed2), color-stop(100%, rgba(103, 158, 210, 0.1)));
+  background-image: -webkit-linear-gradient(bottom, #679ed2, rgba(103, 158, 210, 0.1));
+  background-image: -moz-linear-gradient(bottom, #679ed2, rgba(103, 158, 210, 0.1));
+  background-image: -o-linear-gradient(bottom, #679ed2, rgba(103, 158, 210, 0.1));
+  background-image: -ms-linear-gradient(bottom, #679ed2, rgba(103, 158, 210, 0.1));
+  background-image: linear-gradient(bottom, #679ed2, rgba(103, 158, 210, 0.1));
+}
+
+/* line 197, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/Applications/gta/.metadata/.plugins/com.emc.xcp.uitemplate.ui/resources/custom-themes/xcptcln.CleanTheme-1.0.0.jar/cleantheme.scss */
+.main-dark-up .x-panel-body-xcp-column-box-ui {
+  background-image: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(0%, #0c5aa6), color-stop(100%, #679ed2));
+  background-image: -webkit-linear-gradient(bottom, #0c5aa6, #679ed2);
+  background-image: -moz-linear-gradient(bottom, #0c5aa6, #679ed2);
+  background-image: -o-linear-gradient(bottom, #0c5aa6, #679ed2);
+  background-image: -ms-linear-gradient(bottom, #0c5aa6, #679ed2);
+  background-image: linear-gradient(bottom, #0c5aa6, #679ed2);
+}
+
+/* line 201, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/Applications/gta/.metadata/.plugins/com.emc.xcp.uitemplate.ui/resources/custom-themes/xcptcln.CleanTheme-1.0.0.jar/cleantheme.scss */
+.main-light-down .x-panel-header {
+  margin-left: 0px;
+}
+
+/* line 202, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/Applications/gta/.metadata/.plugins/com.emc.xcp.uitemplate.ui/resources/custom-themes/xcptcln.CleanTheme-1.0.0.jar/cleantheme.scss */
+.main-light-down .x-panel-header-xcp-column-box-ui {
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #679ed2), color-stop(100%, rgba(103, 158, 210, 0.1)));
+  background-image: -webkit-linear-gradient(top, #679ed2, rgba(103, 158, 210, 0.1));
+  background-image: -moz-linear-gradient(top, #679ed2, rgba(103, 158, 210, 0.1));
+  background-image: -o-linear-gradient(top, #679ed2, rgba(103, 158, 210, 0.1));
+  background-image: -ms-linear-gradient(top, #679ed2, rgba(103, 158, 210, 0.1));
+  background-image: linear-gradient(top, #679ed2, rgba(103, 158, 210, 0.1));
+}
+
+/* line 204, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/Applications/gta/.metadata/.plugins/com.emc.xcp.uitemplate.ui/resources/custom-themes/xcptcln.CleanTheme-1.0.0.jar/cleantheme.scss */
+.main-light-down .x-panel-body-xcp-column-box-ui {
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(103, 158, 210, 0.1)), color-stop(100%, rgba(255, 255, 255, 0.005)));
+  background-image: -webkit-linear-gradient(top, rgba(103, 158, 210, 0.1), rgba(255, 255, 255, 0.005));
+  background-image: -moz-linear-gradient(top, rgba(103, 158, 210, 0.1), rgba(255, 255, 255, 0.005));
+  background-image: -o-linear-gradient(top, rgba(103, 158, 210, 0.1), rgba(255, 255, 255, 0.005));
+  background-image: -ms-linear-gradient(top, rgba(103, 158, 210, 0.1), rgba(255, 255, 255, 0.005));
+  background-image: linear-gradient(top, rgba(103, 158, 210, 0.1), rgba(255, 255, 255, 0.005));
+}
+
+/* line 207, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/Applications/gta/.metadata/.plugins/com.emc.xcp.uitemplate.ui/resources/custom-themes/xcptcln.CleanTheme-1.0.0.jar/cleantheme.scss */
+.main-light-up .x-panel-header {
+  margin-left: 0px;
+}
+
+/* line 208, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/Applications/gta/.metadata/.plugins/com.emc.xcp.uitemplate.ui/resources/custom-themes/xcptcln.CleanTheme-1.0.0.jar/cleantheme.scss */
+.main-light-up .x-panel-header-xcp-column-box-ui {
+  background-image: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(0%, rgba(103, 158, 210, 0.1)), color-stop(100%, rgba(255, 255, 255, 0.005)));
+  background-image: -webkit-linear-gradient(bottom, rgba(103, 158, 210, 0.1), rgba(255, 255, 255, 0.005));
+  background-image: -moz-linear-gradient(bottom, rgba(103, 158, 210, 0.1), rgba(255, 255, 255, 0.005));
+  background-image: -o-linear-gradient(bottom, rgba(103, 158, 210, 0.1), rgba(255, 255, 255, 0.005));
+  background-image: -ms-linear-gradient(bottom, rgba(103, 158, 210, 0.1), rgba(255, 255, 255, 0.005));
+  background-image: linear-gradient(bottom, rgba(103, 158, 210, 0.1), rgba(255, 255, 255, 0.005));
+}
+
+/* line 210, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/Applications/gta/.metadata/.plugins/com.emc.xcp.uitemplate.ui/resources/custom-themes/xcptcln.CleanTheme-1.0.0.jar/cleantheme.scss */
+.main-light-up .x-panel-body-xcp-column-box-ui {
+  background-image: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(0%, #679ed2), color-stop(100%, rgba(103, 158, 210, 0.1)));
+  background-image: -webkit-linear-gradient(bottom, #679ed2, rgba(103, 158, 210, 0.1));
+  background-image: -moz-linear-gradient(bottom, #679ed2, rgba(103, 158, 210, 0.1));
+  background-image: -o-linear-gradient(bottom, #679ed2, rgba(103, 158, 210, 0.1));
+  background-image: -ms-linear-gradient(bottom, #679ed2, rgba(103, 158, 210, 0.1));
+  background-image: linear-gradient(bottom, #679ed2, rgba(103, 158, 210, 0.1));
+}
+
+/* line 215, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/Applications/gta/.metadata/.plugins/com.emc.xcp.uitemplate.ui/resources/custom-themes/xcptcln.CleanTheme-1.0.0.jar/cleantheme.scss */
+.box-white .x-panel-header-xcp-column-box-ui {
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(100%, #ffffff));
+  background-image: -webkit-linear-gradient(top, #ffffff, #ffffff);
+  background-image: -moz-linear-gradient(top, #ffffff, #ffffff);
+  background-image: -o-linear-gradient(top, #ffffff, #ffffff);
+  background-image: -ms-linear-gradient(top, #ffffff, #ffffff);
+  background-image: linear-gradient(top, #ffffff, #ffffff);
+}
+
+/* line 217, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/Applications/gta/.metadata/.plugins/com.emc.xcp.uitemplate.ui/resources/custom-themes/xcptcln.CleanTheme-1.0.0.jar/cleantheme.scss */
+.box-white .x-panel-body-xcp-column-box-ui {
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(100%, #ffffff));
+  background-image: -webkit-linear-gradient(top, #ffffff, #ffffff);
+  background-image: -moz-linear-gradient(top, #ffffff, #ffffff);
+  background-image: -o-linear-gradient(top, #ffffff, #ffffff);
+  background-image: -ms-linear-gradient(top, #ffffff, #ffffff);
+  background-image: linear-gradient(top, #ffffff, #ffffff);
+}
+
+/* line 221, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/Applications/gta/.metadata/.plugins/com.emc.xcp.uitemplate.ui/resources/custom-themes/xcptcln.CleanTheme-1.0.0.jar/cleantheme.scss */
+.box-clear .x-panel-header-xcp-column-box-ui {
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(255, 255, 255, 0.005)), color-stop(100%, rgba(255, 255, 255, 0.005)));
+  background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.005), rgba(255, 255, 255, 0.005));
+  background-image: -moz-linear-gradient(top, rgba(255, 255, 255, 0.005), rgba(255, 255, 255, 0.005));
+  background-image: -o-linear-gradient(top, rgba(255, 255, 255, 0.005), rgba(255, 255, 255, 0.005));
+  background-image: -ms-linear-gradient(top, rgba(255, 255, 255, 0.005), rgba(255, 255, 255, 0.005));
+  background-image: linear-gradient(top, rgba(255, 255, 255, 0.005), rgba(255, 255, 255, 0.005));
+}
+
+/* line 223, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/Applications/gta/.metadata/.plugins/com.emc.xcp.uitemplate.ui/resources/custom-themes/xcptcln.CleanTheme-1.0.0.jar/cleantheme.scss */
+.box-clear .x-panel-body-xcp-column-box-ui {
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(255, 255, 255, 0.005)), color-stop(100%, rgba(255, 255, 255, 0.005)));
+  background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.005), rgba(255, 255, 255, 0.005));
+  background-image: -moz-linear-gradient(top, rgba(255, 255, 255, 0.005), rgba(255, 255, 255, 0.005));
+  background-image: -o-linear-gradient(top, rgba(255, 255, 255, 0.005), rgba(255, 255, 255, 0.005));
+  background-image: -ms-linear-gradient(top, rgba(255, 255, 255, 0.005), rgba(255, 255, 255, 0.005));
+  background-image: linear-gradient(top, rgba(255, 255, 255, 0.005), rgba(255, 255, 255, 0.005));
+}
+
+/***************
+ SEPARATES
+*/
+/* line 233, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/Applications/gta/.metadata/.plugins/com.emc.xcp.uitemplate.ui/resources/custom-themes/xcptcln.CleanTheme-1.0.0.jar/cleantheme.scss */
+.h-comp-dark-down .x-panel-header-xcp-column-box-ui {
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ff9700), color-stop(100%, #ffc673));
+  background-image: -webkit-linear-gradient(top, #ff9700, #ffc673);
+  background-image: -moz-linear-gradient(top, #ff9700, #ffc673);
+  background-image: -o-linear-gradient(top, #ff9700, #ffc673);
+  background-image: -ms-linear-gradient(top, #ff9700, #ffc673);
+  background-image: linear-gradient(top, #ff9700, #ffc673);
+}
+
+/* line 235, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/Applications/gta/.metadata/.plugins/com.emc.xcp.uitemplate.ui/resources/custom-themes/xcptcln.CleanTheme-1.0.0.jar/cleantheme.scss */
+.b-comp-dark-down .x-panel-body-xcp-column-box-ui {
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ff9700), color-stop(100%, #ffc673));
+  background-image: -webkit-linear-gradient(top, #ff9700, #ffc673);
+  background-image: -moz-linear-gradient(top, #ff9700, #ffc673);
+  background-image: -o-linear-gradient(top, #ff9700, #ffc673);
+  background-image: -ms-linear-gradient(top, #ff9700, #ffc673);
+  background-image: linear-gradient(top, #ff9700, #ffc673);
+}
+
+/* line 237, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/Applications/gta/.metadata/.plugins/com.emc.xcp.uitemplate.ui/resources/custom-themes/xcptcln.CleanTheme-1.0.0.jar/cleantheme.scss */
+.h-comp-dark-up .x-panel-header-xcp-column-box-ui {
+  background-image: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(0%, #ff9700), color-stop(100%, #ffc673));
+  background-image: -webkit-linear-gradient(bottom, #ff9700, #ffc673);
+  background-image: -moz-linear-gradient(bottom, #ff9700, #ffc673);
+  background-image: -o-linear-gradient(bottom, #ff9700, #ffc673);
+  background-image: -ms-linear-gradient(bottom, #ff9700, #ffc673);
+  background-image: linear-gradient(bottom, #ff9700, #ffc673);
+}
+
+/* line 239, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/Applications/gta/.metadata/.plugins/com.emc.xcp.uitemplate.ui/resources/custom-themes/xcptcln.CleanTheme-1.0.0.jar/cleantheme.scss */
+.b-comp-dark-up .x-panel-body-xcp-column-box-ui {
+  background-image: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(0%, #ff9700), color-stop(100%, #ffc673));
+  background-image: -webkit-linear-gradient(bottom, #ff9700, #ffc673);
+  background-image: -moz-linear-gradient(bottom, #ff9700, #ffc673);
+  background-image: -o-linear-gradient(bottom, #ff9700, #ffc673);
+  background-image: -ms-linear-gradient(bottom, #ff9700, #ffc673);
+  background-image: linear-gradient(bottom, #ff9700, #ffc673);
+}
+
+/* line 244, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/Applications/gta/.metadata/.plugins/com.emc.xcp.uitemplate.ui/resources/custom-themes/xcptcln.CleanTheme-1.0.0.jar/cleantheme.scss */
+.h-comp-light-down .x-panel-header-xcp-column-box-ui {
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffc673), color-stop(100%, rgba(255, 198, 115, 0.1)));
+  background-image: -webkit-linear-gradient(top, #ffc673, rgba(255, 198, 115, 0.1));
+  background-image: -moz-linear-gradient(top, #ffc673, rgba(255, 198, 115, 0.1));
+  background-image: -o-linear-gradient(top, #ffc673, rgba(255, 198, 115, 0.1));
+  background-image: -ms-linear-gradient(top, #ffc673, rgba(255, 198, 115, 0.1));
+  background-image: linear-gradient(top, #ffc673, rgba(255, 198, 115, 0.1));
+}
+
+/* line 246, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/Applications/gta/.metadata/.plugins/com.emc.xcp.uitemplate.ui/resources/custom-themes/xcptcln.CleanTheme-1.0.0.jar/cleantheme.scss */
+.b-comp-light-down .x-panel-body-xcp-column-box-ui {
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffc673), color-stop(100%, rgba(255, 198, 115, 0.1)));
+  background-image: -webkit-linear-gradient(top, #ffc673, rgba(255, 198, 115, 0.1));
+  background-image: -moz-linear-gradient(top, #ffc673, rgba(255, 198, 115, 0.1));
+  background-image: -o-linear-gradient(top, #ffc673, rgba(255, 198, 115, 0.1));
+  background-image: -ms-linear-gradient(top, #ffc673, rgba(255, 198, 115, 0.1));
+  background-image: linear-gradient(top, #ffc673, rgba(255, 198, 115, 0.1));
+}
+
+/* line 248, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/Applications/gta/.metadata/.plugins/com.emc.xcp.uitemplate.ui/resources/custom-themes/xcptcln.CleanTheme-1.0.0.jar/cleantheme.scss */
+.h-comp-light-up .x-panel-header-xcp-column-box-ui {
+  background-image: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(0%, #ffc673), color-stop(100%, rgba(255, 198, 115, 0.1)));
+  background-image: -webkit-linear-gradient(bottom, #ffc673, rgba(255, 198, 115, 0.1));
+  background-image: -moz-linear-gradient(bottom, #ffc673, rgba(255, 198, 115, 0.1));
+  background-image: -o-linear-gradient(bottom, #ffc673, rgba(255, 198, 115, 0.1));
+  background-image: -ms-linear-gradient(bottom, #ffc673, rgba(255, 198, 115, 0.1));
+  background-image: linear-gradient(bottom, #ffc673, rgba(255, 198, 115, 0.1));
+}
+
+/* line 250, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/Applications/gta/.metadata/.plugins/com.emc.xcp.uitemplate.ui/resources/custom-themes/xcptcln.CleanTheme-1.0.0.jar/cleantheme.scss */
+.b-comp-light-up .x-panel-body-xcp-column-box-ui {
+  background-image: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(0%, #ffc673), color-stop(100%, rgba(255, 198, 115, 0.1)));
+  background-image: -webkit-linear-gradient(bottom, #ffc673, rgba(255, 198, 115, 0.1));
+  background-image: -moz-linear-gradient(bottom, #ffc673, rgba(255, 198, 115, 0.1));
+  background-image: -o-linear-gradient(bottom, #ffc673, rgba(255, 198, 115, 0.1));
+  background-image: -ms-linear-gradient(bottom, #ffc673, rgba(255, 198, 115, 0.1));
+  background-image: linear-gradient(bottom, #ffc673, rgba(255, 198, 115, 0.1));
+}
+
+/* line 254, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/Applications/gta/.metadata/.plugins/com.emc.xcp.uitemplate.ui/resources/custom-themes/xcptcln.CleanTheme-1.0.0.jar/cleantheme.scss */
+.h-main-dark-down .x-panel-header-xcp-column-box-ui {
+  height: auto;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #0c5aa6), color-stop(100%, #679ed2));
+  background-image: -webkit-linear-gradient(top, #0c5aa6, #679ed2);
+  background-image: -moz-linear-gradient(top, #0c5aa6, #679ed2);
+  background-image: -o-linear-gradient(top, #0c5aa6, #679ed2);
+  background-image: -ms-linear-gradient(top, #0c5aa6, #679ed2);
+  background-image: linear-gradient(top, #0c5aa6, #679ed2);
+}
+
+/* line 256, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/Applications/gta/.metadata/.plugins/com.emc.xcp.uitemplate.ui/resources/custom-themes/xcptcln.CleanTheme-1.0.0.jar/cleantheme.scss */
+.b-main-dark-down .x-panel-body-xcp-column-box-ui {
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #0c5aa6), color-stop(100%, #679ed2));
+  background-image: -webkit-linear-gradient(top, #0c5aa6, #679ed2);
+  background-image: -moz-linear-gradient(top, #0c5aa6, #679ed2);
+  background-image: -o-linear-gradient(top, #0c5aa6, #679ed2);
+  background-image: -ms-linear-gradient(top, #0c5aa6, #679ed2);
+  background-image: linear-gradient(top, #0c5aa6, #679ed2);
+}
+
+/* line 258, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/Applications/gta/.metadata/.plugins/com.emc.xcp.uitemplate.ui/resources/custom-themes/xcptcln.CleanTheme-1.0.0.jar/cleantheme.scss */
+.h-main-dark-up .x-panel-header-xcp-column-box-ui {
+  background-image: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(0%, #0c5aa6), color-stop(100%, #679ed2));
+  background-image: -webkit-linear-gradient(bottom, #0c5aa6, #679ed2);
+  background-image: -moz-linear-gradient(bottom, #0c5aa6, #679ed2);
+  background-image: -o-linear-gradient(bottom, #0c5aa6, #679ed2);
+  background-image: -ms-linear-gradient(bottom, #0c5aa6, #679ed2);
+  background-image: linear-gradient(bottom, #0c5aa6, #679ed2);
+}
+
+/* line 260, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/Applications/gta/.metadata/.plugins/com.emc.xcp.uitemplate.ui/resources/custom-themes/xcptcln.CleanTheme-1.0.0.jar/cleantheme.scss */
+.b-main-dark-up .x-panel-body-xcp-column-box-ui {
+  background-image: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(0%, #0c5aa6), color-stop(100%, #679ed2));
+  background-image: -webkit-linear-gradient(bottom, #0c5aa6, #679ed2);
+  background-image: -moz-linear-gradient(bottom, #0c5aa6, #679ed2);
+  background-image: -o-linear-gradient(bottom, #0c5aa6, #679ed2);
+  background-image: -ms-linear-gradient(bottom, #0c5aa6, #679ed2);
+  background-image: linear-gradient(bottom, #0c5aa6, #679ed2);
+}
+
+/* line 263, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/Applications/gta/.metadata/.plugins/com.emc.xcp.uitemplate.ui/resources/custom-themes/xcptcln.CleanTheme-1.0.0.jar/cleantheme.scss */
+.h-main-dark-left .x-panel-header-xcp-column-box-ui {
+  height: auto;
+  background-image: -webkit-gradient(linear, 100% 50%, 0% 50%, color-stop(0%, #0c5aa6), color-stop(100%, rgba(103, 158, 210, 0.1)));
+  background-image: -webkit-linear-gradient(right, #0c5aa6, rgba(103, 158, 210, 0.1));
+  background-image: -moz-linear-gradient(right, #0c5aa6, rgba(103, 158, 210, 0.1));
+  background-image: -o-linear-gradient(right, #0c5aa6, rgba(103, 158, 210, 0.1));
+  background-image: -ms-linear-gradient(right, #0c5aa6, rgba(103, 158, 210, 0.1));
+  background-image: linear-gradient(right, #0c5aa6, rgba(103, 158, 210, 0.1));
+}
+
+/* line 265, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/Applications/gta/.metadata/.plugins/com.emc.xcp.uitemplate.ui/resources/custom-themes/xcptcln.CleanTheme-1.0.0.jar/cleantheme.scss */
+.b-main-dark-left .x-panel-body-xcp-column-box-ui {
+  background-image: -webkit-gradient(linear, 100% 50%, 0% 50%, color-stop(0%, #0c5aa6), color-stop(100%, rgba(103, 158, 210, 0.1)));
+  background-image: -webkit-linear-gradient(right, #0c5aa6, rgba(103, 158, 210, 0.1));
+  background-image: -moz-linear-gradient(right, #0c5aa6, rgba(103, 158, 210, 0.1));
+  background-image: -o-linear-gradient(right, #0c5aa6, rgba(103, 158, 210, 0.1));
+  background-image: -ms-linear-gradient(right, #0c5aa6, rgba(103, 158, 210, 0.1));
+  background-image: linear-gradient(right, #0c5aa6, rgba(103, 158, 210, 0.1));
+}
+
+/* line 267, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/Applications/gta/.metadata/.plugins/com.emc.xcp.uitemplate.ui/resources/custom-themes/xcptcln.CleanTheme-1.0.0.jar/cleantheme.scss */
+.h-main-dark-right .x-panel-header-xcp-column-box-ui {
+  background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #0c5aa6), color-stop(100%, rgba(103, 158, 210, 0.1)));
+  background-image: -webkit-linear-gradient(left, #0c5aa6, rgba(103, 158, 210, 0.1));
+  background-image: -moz-linear-gradient(left, #0c5aa6, rgba(103, 158, 210, 0.1));
+  background-image: -o-linear-gradient(left, #0c5aa6, rgba(103, 158, 210, 0.1));
+  background-image: -ms-linear-gradient(left, #0c5aa6, rgba(103, 158, 210, 0.1));
+  background-image: linear-gradient(left, #0c5aa6, rgba(103, 158, 210, 0.1));
+}
+
+/* line 269, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/Applications/gta/.metadata/.plugins/com.emc.xcp.uitemplate.ui/resources/custom-themes/xcptcln.CleanTheme-1.0.0.jar/cleantheme.scss */
+.b-main-dark-right .x-panel-body-xcp-column-box-ui {
+  background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #0c5aa6), color-stop(100%, rgba(103, 158, 210, 0.1)));
+  background-image: -webkit-linear-gradient(left, #0c5aa6, rgba(103, 158, 210, 0.1));
+  background-image: -moz-linear-gradient(left, #0c5aa6, rgba(103, 158, 210, 0.1));
+  background-image: -o-linear-gradient(left, #0c5aa6, rgba(103, 158, 210, 0.1));
+  background-image: -ms-linear-gradient(left, #0c5aa6, rgba(103, 158, 210, 0.1));
+  background-image: linear-gradient(left, #0c5aa6, rgba(103, 158, 210, 0.1));
+}
+
+/* line 273, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/Applications/gta/.metadata/.plugins/com.emc.xcp.uitemplate.ui/resources/custom-themes/xcptcln.CleanTheme-1.0.0.jar/cleantheme.scss */
+.h-main-light-down .x-panel-header-xcp-column-box-ui {
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #679ed2), color-stop(100%, rgba(103, 158, 210, 0.1)));
+  background-image: -webkit-linear-gradient(top, #679ed2, rgba(103, 158, 210, 0.1));
+  background-image: -moz-linear-gradient(top, #679ed2, rgba(103, 158, 210, 0.1));
+  background-image: -o-linear-gradient(top, #679ed2, rgba(103, 158, 210, 0.1));
+  background-image: -ms-linear-gradient(top, #679ed2, rgba(103, 158, 210, 0.1));
+  background-image: linear-gradient(top, #679ed2, rgba(103, 158, 210, 0.1));
+}
+
+/* line 275, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/Applications/gta/.metadata/.plugins/com.emc.xcp.uitemplate.ui/resources/custom-themes/xcptcln.CleanTheme-1.0.0.jar/cleantheme.scss */
+.b-main-light-down .x-panel-body-xcp-column-box-ui {
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #679ed2), color-stop(100%, rgba(103, 158, 210, 0.1)));
+  background-image: -webkit-linear-gradient(top, #679ed2, rgba(103, 158, 210, 0.1));
+  background-image: -moz-linear-gradient(top, #679ed2, rgba(103, 158, 210, 0.1));
+  background-image: -o-linear-gradient(top, #679ed2, rgba(103, 158, 210, 0.1));
+  background-image: -ms-linear-gradient(top, #679ed2, rgba(103, 158, 210, 0.1));
+  background-image: linear-gradient(top, #679ed2, rgba(103, 158, 210, 0.1));
+}
+
+/* line 277, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/Applications/gta/.metadata/.plugins/com.emc.xcp.uitemplate.ui/resources/custom-themes/xcptcln.CleanTheme-1.0.0.jar/cleantheme.scss */
+.h-main-light-up .x-panel-header-xcp-column-box-ui {
+  background-image: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(0%, #679ed2), color-stop(100%, rgba(103, 158, 210, 0.1)));
+  background-image: -webkit-linear-gradient(bottom, #679ed2, rgba(103, 158, 210, 0.1));
+  background-image: -moz-linear-gradient(bottom, #679ed2, rgba(103, 158, 210, 0.1));
+  background-image: -o-linear-gradient(bottom, #679ed2, rgba(103, 158, 210, 0.1));
+  background-image: -ms-linear-gradient(bottom, #679ed2, rgba(103, 158, 210, 0.1));
+  background-image: linear-gradient(bottom, #679ed2, rgba(103, 158, 210, 0.1));
+}
+
+/* line 279, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/Applications/gta/.metadata/.plugins/com.emc.xcp.uitemplate.ui/resources/custom-themes/xcptcln.CleanTheme-1.0.0.jar/cleantheme.scss */
+.b-main-light-up .x-panel-body-xcp-column-box-ui {
+  background-image: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(0%, #679ed2), color-stop(100%, rgba(103, 158, 210, 0.1)));
+  background-image: -webkit-linear-gradient(bottom, #679ed2, rgba(103, 158, 210, 0.1));
+  background-image: -moz-linear-gradient(bottom, #679ed2, rgba(103, 158, 210, 0.1));
+  background-image: -o-linear-gradient(bottom, #679ed2, rgba(103, 158, 210, 0.1));
+  background-image: -ms-linear-gradient(bottom, #679ed2, rgba(103, 158, 210, 0.1));
+  background-image: linear-gradient(bottom, #679ed2, rgba(103, 158, 210, 0.1));
+}
+
+/* line 284, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/Applications/gta/.metadata/.plugins/com.emc.xcp.uitemplate.ui/resources/custom-themes/xcptcln.CleanTheme-1.0.0.jar/cleantheme.scss */
+.h-box-white .x-panel-header-xcp-column-box-ui {
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(100%, #ffffff));
+  background-image: -webkit-linear-gradient(top, #ffffff, #ffffff);
+  background-image: -moz-linear-gradient(top, #ffffff, #ffffff);
+  background-image: -o-linear-gradient(top, #ffffff, #ffffff);
+  background-image: -ms-linear-gradient(top, #ffffff, #ffffff);
+  background-image: linear-gradient(top, #ffffff, #ffffff);
+}
+
+/* line 286, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/Applications/gta/.metadata/.plugins/com.emc.xcp.uitemplate.ui/resources/custom-themes/xcptcln.CleanTheme-1.0.0.jar/cleantheme.scss */
+.b-box-white .x-panel-body-xcp-column-box-ui {
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(100%, #ffffff));
+  background-image: -webkit-linear-gradient(top, #ffffff, #ffffff);
+  background-image: -moz-linear-gradient(top, #ffffff, #ffffff);
+  background-image: -o-linear-gradient(top, #ffffff, #ffffff);
+  background-image: -ms-linear-gradient(top, #ffffff, #ffffff);
+  background-image: linear-gradient(top, #ffffff, #ffffff);
+}
+
+/* line 290, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/Applications/gta/.metadata/.plugins/com.emc.xcp.uitemplate.ui/resources/custom-themes/xcptcln.CleanTheme-1.0.0.jar/cleantheme.scss */
+.h-box-clear .x-panel-header-xcp-column-box-ui {
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(255, 255, 255, 0.005)), color-stop(100%, rgba(255, 255, 255, 0.005)));
+  background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.005), rgba(255, 255, 255, 0.005));
+  background-image: -moz-linear-gradient(top, rgba(255, 255, 255, 0.005), rgba(255, 255, 255, 0.005));
+  background-image: -o-linear-gradient(top, rgba(255, 255, 255, 0.005), rgba(255, 255, 255, 0.005));
+  background-image: -ms-linear-gradient(top, rgba(255, 255, 255, 0.005), rgba(255, 255, 255, 0.005));
+  background-image: linear-gradient(top, rgba(255, 255, 255, 0.005), rgba(255, 255, 255, 0.005));
+}
+
+/* line 292, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/Applications/gta/.metadata/.plugins/com.emc.xcp.uitemplate.ui/resources/custom-themes/xcptcln.CleanTheme-1.0.0.jar/cleantheme.scss */
+.b-box-clear .x-panel-body-xcp-column-box-ui {
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(255, 255, 255, 0.005)), color-stop(100%, rgba(255, 255, 255, 0.005)));
+  background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.005), rgba(255, 255, 255, 0.005));
+  background-image: -moz-linear-gradient(top, rgba(255, 255, 255, 0.005), rgba(255, 255, 255, 0.005));
+  background-image: -o-linear-gradient(top, rgba(255, 255, 255, 0.005), rgba(255, 255, 255, 0.005));
+  background-image: -ms-linear-gradient(top, rgba(255, 255, 255, 0.005), rgba(255, 255, 255, 0.005));
+  background-image: linear-gradient(top, rgba(255, 255, 255, 0.005), rgba(255, 255, 255, 0.005));
+}
+
+/* line 296, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/Applications/gta/.metadata/.plugins/com.emc.xcp.uitemplate.ui/resources/custom-themes/xcptcln.CleanTheme-1.0.0.jar/cleantheme.scss */
+.h-round-top .x-panel-header-xcp-column-box-ui {
+  -moz-border-radius-topleft: 4px;
+  -webkit-border-top-left-radius: 4px;
+  -o-border-top-left-radius: 4px;
+  -ms-border-top-left-radius: 4px;
+  -khtml-border-top-left-radius: 4px;
+  border-top-left-radius: 4px;
+  -moz-border-radius-topright: 4px;
+  -webkit-border-top-right-radius: 4px;
+  -o-border-top-right-radius: 4px;
+  -ms-border-top-right-radius: 4px;
+  -khtml-border-top-right-radius: 4px;
+  border-top-right-radius: 4px;
+}
+
+/* line 297, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/Applications/gta/.metadata/.plugins/com.emc.xcp.uitemplate.ui/resources/custom-themes/xcptcln.CleanTheme-1.0.0.jar/cleantheme.scss */
+.h-round-bottom .x-panel-header-xcp-column-box-ui {
+  -moz-border-radius-bottomleft: 4px;
+  -webkit-border-bottom-left-radius: 4px;
+  -o-border-bottom-left-radius: 4px;
+  -ms-border-bottom-left-radius: 4px;
+  -khtml-border-bottom-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  -moz-border-radius-bottomright: 4px;
+  -webkit-border-bottom-right-radius: 4px;
+  -o-border-bottom-right-radius: 4px;
+  -ms-border-bottom-right-radius: 4px;
+  -khtml-border-bottom-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+/* line 298, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/Applications/gta/.metadata/.plugins/com.emc.xcp.uitemplate.ui/resources/custom-themes/xcptcln.CleanTheme-1.0.0.jar/cleantheme.scss */
+.h-round-left .x-panel-header-xcp-column-box-ui {
+  -moz-border-radius-topleft: 4px;
+  -webkit-border-top-left-radius: 4px;
+  -o-border-top-left-radius: 4px;
+  -ms-border-top-left-radius: 4px;
+  -khtml-border-top-left-radius: 4px;
+  border-top-left-radius: 4px;
+  -moz-border-radius-bottomleft: 4px;
+  -webkit-border-bottom-left-radius: 4px;
+  -o-border-bottom-left-radius: 4px;
+  -ms-border-bottom-left-radius: 4px;
+  -khtml-border-bottom-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
+/* line 299, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/Applications/gta/.metadata/.plugins/com.emc.xcp.uitemplate.ui/resources/custom-themes/xcptcln.CleanTheme-1.0.0.jar/cleantheme.scss */
+.h-round-right .x-panel-header-xcp-column-box-ui {
+  -moz-border-radius-topright: 4px;
+  -webkit-border-top-right-radius: 4px;
+  -o-border-top-right-radius: 4px;
+  -ms-border-top-right-radius: 4px;
+  -khtml-border-top-right-radius: 4px;
+  border-top-right-radius: 4px;
+  -moz-border-radius-bottomright: 4px;
+  -webkit-border-bottom-right-radius: 4px;
+  -o-border-bottom-right-radius: 4px;
+  -ms-border-bottom-right-radius: 4px;
+  -khtml-border-bottom-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+/* line 301, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/Applications/gta/.metadata/.plugins/com.emc.xcp.uitemplate.ui/resources/custom-themes/xcptcln.CleanTheme-1.0.0.jar/cleantheme.scss */
+.b-round-top .x-panel-body-xcp-column-box-ui {
+  -moz-border-radius-topleft: 4px;
+  -webkit-border-top-left-radius: 4px;
+  -o-border-top-left-radius: 4px;
+  -ms-border-top-left-radius: 4px;
+  -khtml-border-top-left-radius: 4px;
+  border-top-left-radius: 4px;
+  -moz-border-radius-topright: 4px;
+  -webkit-border-top-right-radius: 4px;
+  -o-border-top-right-radius: 4px;
+  -ms-border-top-right-radius: 4px;
+  -khtml-border-top-right-radius: 4px;
+  border-top-right-radius: 4px;
+}
+
+/* line 302, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/Applications/gta/.metadata/.plugins/com.emc.xcp.uitemplate.ui/resources/custom-themes/xcptcln.CleanTheme-1.0.0.jar/cleantheme.scss */
+.b-round-bottom .x-panel-body-xcp-column-box-ui {
+  -moz-border-radius-bottomleft: 4px;
+  -webkit-border-bottom-left-radius: 4px;
+  -o-border-bottom-left-radius: 4px;
+  -ms-border-bottom-left-radius: 4px;
+  -khtml-border-bottom-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  -moz-border-radius-bottomright: 4px;
+  -webkit-border-bottom-right-radius: 4px;
+  -o-border-bottom-right-radius: 4px;
+  -ms-border-bottom-right-radius: 4px;
+  -khtml-border-bottom-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+/* line 303, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/Applications/gta/.metadata/.plugins/com.emc.xcp.uitemplate.ui/resources/custom-themes/xcptcln.CleanTheme-1.0.0.jar/cleantheme.scss */
+.b-round-left .x-panel-body-xcp-column-box-ui {
+  -moz-border-radius-topleft: 4px;
+  -webkit-border-top-left-radius: 4px;
+  -o-border-top-left-radius: 4px;
+  -ms-border-top-left-radius: 4px;
+  -khtml-border-top-left-radius: 4px;
+  border-top-left-radius: 4px;
+  -moz-border-radius-bottomleft: 4px;
+  -webkit-border-bottom-left-radius: 4px;
+  -o-border-bottom-left-radius: 4px;
+  -ms-border-bottom-left-radius: 4px;
+  -khtml-border-bottom-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
+/* line 304, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/Applications/gta/.metadata/.plugins/com.emc.xcp.uitemplate.ui/resources/custom-themes/xcptcln.CleanTheme-1.0.0.jar/cleantheme.scss */
+.b-round-right .x-panel-body-xcp-column-box-ui {
+  -moz-border-radius-topright: 4px;
+  -webkit-border-top-right-radius: 4px;
+  -o-border-top-right-radius: 4px;
+  -ms-border-top-right-radius: 4px;
+  -khtml-border-top-right-radius: 4px;
+  border-top-right-radius: 4px;
+  -moz-border-radius-bottomright: 4px;
+  -webkit-border-bottom-right-radius: 4px;
+  -o-border-bottom-right-radius: 4px;
+  -ms-border-bottom-right-radius: 4px;
+  -khtml-border-bottom-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+/******************************
+ BOX TEXT COLORS
+*/
+/* line 311, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/Applications/gta/.metadata/.plugins/com.emc.xcp.uitemplate.ui/resources/custom-themes/xcptcln.CleanTheme-1.0.0.jar/cleantheme.scss */
+.h-text-white .x-panel-header-text-xcp-column-box-ui {
+  color: white;
+}
+
+/* line 312, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/Applications/gta/.metadata/.plugins/com.emc.xcp.uitemplate.ui/resources/custom-themes/xcptcln.CleanTheme-1.0.0.jar/cleantheme.scss */
+.h-text-main-dark .x-panel-header-text-xcp-column-box-ui {
+  color: #0c5aa6;
+}
+
+/* line 313, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/Applications/gta/.metadata/.plugins/com.emc.xcp.uitemplate.ui/resources/custom-themes/xcptcln.CleanTheme-1.0.0.jar/cleantheme.scss */
+.h-text-main-light .x-panel-header-text-xcp-column-box-ui {
+  color: #679ed2;
+}
+
+/* line 314, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/Applications/gta/.metadata/.plugins/com.emc.xcp.uitemplate.ui/resources/custom-themes/xcptcln.CleanTheme-1.0.0.jar/cleantheme.scss */
+.h-text-comp-dark .x-panel-header-text-xcp-column-box-ui {
+  color: #ff9700;
+}
+
+/* line 315, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/Applications/gta/.metadata/.plugins/com.emc.xcp.uitemplate.ui/resources/custom-themes/xcptcln.CleanTheme-1.0.0.jar/cleantheme.scss */
+.h-text-comp-light .x-panel-header-text-xcp-column-box-ui {
+  color: #ffc673;
+}
+
+/* line 317, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/Applications/gta/.metadata/.plugins/com.emc.xcp.uitemplate.ui/resources/custom-themes/xcptcln.CleanTheme-1.0.0.jar/cleantheme.scss */
+.b-text-white .x-panel-body-text-xcp-column-box-ui {
+  color: white;
+}
+
+/* line 318, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/Applications/gta/.metadata/.plugins/com.emc.xcp.uitemplate.ui/resources/custom-themes/xcptcln.CleanTheme-1.0.0.jar/cleantheme.scss */
+.b-text-main-dark .x-panel-body-text-xcp-column-box-ui {
+  color: #0c5aa6;
+}
+
+/* line 319, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/Applications/gta/.metadata/.plugins/com.emc.xcp.uitemplate.ui/resources/custom-themes/xcptcln.CleanTheme-1.0.0.jar/cleantheme.scss */
+.b-text-main-light .x-panel-body-text-xcp-column-box-ui {
+  color: #679ed2;
+}
+
+/* line 320, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/Applications/gta/.metadata/.plugins/com.emc.xcp.uitemplate.ui/resources/custom-themes/xcptcln.CleanTheme-1.0.0.jar/cleantheme.scss */
+.b-text-comp-dark .x-panel-body-text-xcp-column-box-ui {
+  color: #ff9700;
+}
+
+/* line 321, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/Applications/gta/.metadata/.plugins/com.emc.xcp.uitemplate.ui/resources/custom-themes/xcptcln.CleanTheme-1.0.0.jar/cleantheme.scss */
+.b-text-comp-light .x-panel-body-text-xcp-column-box-ui {
+  color: #ffc673;
+}
+
+/* line 323, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/Applications/gta/.metadata/.plugins/com.emc.xcp.uitemplate.ui/resources/custom-themes/xcptcln.CleanTheme-1.0.0.jar/cleantheme.scss */
+.b-text-white .x-form-item-label {
+  color: white;
+}
+
+/* line 324, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/Applications/gta/.metadata/.plugins/com.emc.xcp.uitemplate.ui/resources/custom-themes/xcptcln.CleanTheme-1.0.0.jar/cleantheme.scss */
+.b-text-white .x-form-display-field {
+  color: white!important;
+}
+
+/******************************
+ TABS                        */
+/* line 333, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/Applications/gta/.metadata/.plugins/com.emc.xcp.uitemplate.ui/resources/custom-themes/xcptcln.CleanTheme-1.0.0.jar/cleantheme.scss */
+.tab-main .xcp_tab_group-cls .x-tab {
+  background: rgba(103, 158, 210, 0.5);
+  font-color: black;
+  -moz-border-radius-topleft: 6px;
+  -webkit-border-top-left-radius: 6px;
+  -o-border-top-left-radius: 6px;
+  -ms-border-top-left-radius: 6px;
+  -khtml-border-top-left-radius: 6px;
+  border-top-left-radius: 6px;
+  -moz-border-radius-topright: 6px;
+  -webkit-border-top-right-radius: 6px;
+  -o-border-top-right-radius: 6px;
+  -ms-border-top-right-radius: 6px;
+  -khtml-border-top-right-radius: 6px;
+  border-top-right-radius: 6px;
+}
+
+/* line 336, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/Applications/gta/.metadata/.plugins/com.emc.xcp.uitemplate.ui/resources/custom-themes/xcptcln.CleanTheme-1.0.0.jar/cleantheme.scss */
+.tab-main .x-tab-xcp-tab-ui-over {
+  background: #679ed2 !important;
+}
+
+/* line 339, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/Applications/gta/.metadata/.plugins/com.emc.xcp.uitemplate.ui/resources/custom-themes/xcptcln.CleanTheme-1.0.0.jar/cleantheme.scss */
+.tab-main .xcp_tab_group-cls .x-tab-bar-top .xcp-tab-bar-caret {
+  border-top: 10px solid #0c5aa6;
+}
+
+/* line 340, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/Applications/gta/.metadata/.plugins/com.emc.xcp.uitemplate.ui/resources/custom-themes/xcptcln.CleanTheme-1.0.0.jar/cleantheme.scss */
+.tab-main .x-tab-xcp-tab-ui-active {
+  background: #0c5aa6 !important;
+}
+
+/* line 345, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/Applications/gta/.metadata/.plugins/com.emc.xcp.uitemplate.ui/resources/custom-themes/xcptcln.CleanTheme-1.0.0.jar/cleantheme.scss */
+.tab-comp .xcp_tab_group-cls .x-tab {
+  background: rgba(255, 198, 115, 0.5);
+  font-color: black;
+  -moz-border-radius-topleft: 6px;
+  -webkit-border-top-left-radius: 6px;
+  -o-border-top-left-radius: 6px;
+  -ms-border-top-left-radius: 6px;
+  -khtml-border-top-left-radius: 6px;
+  border-top-left-radius: 6px;
+  -moz-border-radius-topright: 6px;
+  -webkit-border-top-right-radius: 6px;
+  -o-border-top-right-radius: 6px;
+  -ms-border-top-right-radius: 6px;
+  -khtml-border-top-right-radius: 6px;
+  border-top-right-radius: 6px;
+}
+
+/* line 348, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/Applications/gta/.metadata/.plugins/com.emc.xcp.uitemplate.ui/resources/custom-themes/xcptcln.CleanTheme-1.0.0.jar/cleantheme.scss */
+.tab-comp .x-tab-xcp-tab-ui-over {
+  background: #ffc673 !important;
+}
+
+/* line 351, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/Applications/gta/.metadata/.plugins/com.emc.xcp.uitemplate.ui/resources/custom-themes/xcptcln.CleanTheme-1.0.0.jar/cleantheme.scss */
+.tab-comp .xcp_tab_group-cls .x-tab-bar-top .xcp-tab-bar-caret {
+  border-top: 10px solid #ff9700;
+}
+
+/* line 352, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/Applications/gta/.metadata/.plugins/com.emc.xcp.uitemplate.ui/resources/custom-themes/xcptcln.CleanTheme-1.0.0.jar/cleantheme.scss */
+.tab-comp .x-tab-xcp-tab-ui-active {
+  background: #ff9700 !important;
+}
+
+/******************************
+ RESULTS LISTS               
+*/
+/* line 368, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/Applications/gta/.metadata/.plugins/com.emc.xcp.uitemplate.ui/resources/custom-themes/xcptcln.CleanTheme-1.0.0.jar/cleantheme.scss */
+.res-head-fill-main .x-column-header-inner {
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #0c5aa6), color-stop(100%, #679ed2));
+  background-image: -webkit-linear-gradient(top, #0c5aa6, #679ed2);
+  background-image: -moz-linear-gradient(top, #0c5aa6, #679ed2);
+  background-image: -o-linear-gradient(top, #0c5aa6, #679ed2);
+  background-image: -ms-linear-gradient(top, #0c5aa6, #679ed2);
+  background-image: linear-gradient(top, #0c5aa6, #679ed2);
+}
+
+/* line 370, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/Applications/gta/.metadata/.plugins/com.emc.xcp.uitemplate.ui/resources/custom-themes/xcptcln.CleanTheme-1.0.0.jar/cleantheme.scss */
+.res-head-fill-comp .x-column-header-inner {
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ff9700), color-stop(100%, #ffc673));
+  background-image: -webkit-linear-gradient(top, #ff9700, #ffc673);
+  background-image: -moz-linear-gradient(top, #ff9700, #ffc673);
+  background-image: -o-linear-gradient(top, #ff9700, #ffc673);
+  background-image: -ms-linear-gradient(top, #ff9700, #ffc673);
+  background-image: linear-gradient(top, #ff9700, #ffc673);
+}
+
+/* line 374, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/Applications/gta/.metadata/.plugins/com.emc.xcp.uitemplate.ui/resources/custom-themes/xcptcln.CleanTheme-1.0.0.jar/cleantheme.scss */
+.res-head-largefont .x-column-header-inner .x-column-header-text {
+  font-size: 14px;
+}
+
+/* line 375, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/Applications/gta/.metadata/.plugins/com.emc.xcp.uitemplate.ui/resources/custom-themes/xcptcln.CleanTheme-1.0.0.jar/cleantheme.scss */
+.res-head-smallfont .x-column-header-inner .x-column-header-text {
+  font-size: 10px;
+}
+
+/* line 378, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/Applications/gta/.metadata/.plugins/com.emc.xcp.uitemplate.ui/resources/custom-themes/xcptcln.CleanTheme-1.0.0.jar/cleantheme.scss */
+.res-head-text-white .x-column-header-inner .x-column-header-text {
+  color: white;
+}
+
+/* line 381, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/Applications/gta/.metadata/.plugins/com.emc.xcp.uitemplate.ui/resources/custom-themes/xcptcln.CleanTheme-1.0.0.jar/cleantheme.scss */
+.res-row-fill-main .x-grid-row .x-grid-cell {
+  background-image: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(0%, rgba(103, 158, 210, 0.1)), color-stop(100%, rgba(255, 255, 255, 0.005)));
+  background-image: -webkit-linear-gradient(bottom, rgba(103, 158, 210, 0.1), rgba(255, 255, 255, 0.005));
+  background-image: -moz-linear-gradient(bottom, rgba(103, 158, 210, 0.1), rgba(255, 255, 255, 0.005));
+  background-image: -o-linear-gradient(bottom, rgba(103, 158, 210, 0.1), rgba(255, 255, 255, 0.005));
+  background-image: -ms-linear-gradient(bottom, rgba(103, 158, 210, 0.1), rgba(255, 255, 255, 0.005));
+  background-image: linear-gradient(bottom, rgba(103, 158, 210, 0.1), rgba(255, 255, 255, 0.005));
+}
+
+/* line 383, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/Applications/gta/.metadata/.plugins/com.emc.xcp.uitemplate.ui/resources/custom-themes/xcptcln.CleanTheme-1.0.0.jar/cleantheme.scss */
+.res-row-fill-comp .x-grid-row .x-grid-cell {
+  background-image: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(0%, rgba(255, 198, 115, 0.1)), color-stop(100%, rgba(255, 255, 255, 0.005)));
+  background-image: -webkit-linear-gradient(bottom, rgba(255, 198, 115, 0.1), rgba(255, 255, 255, 0.005));
+  background-image: -moz-linear-gradient(bottom, rgba(255, 198, 115, 0.1), rgba(255, 255, 255, 0.005));
+  background-image: -o-linear-gradient(bottom, rgba(255, 198, 115, 0.1), rgba(255, 255, 255, 0.005));
+  background-image: -ms-linear-gradient(bottom, rgba(255, 198, 115, 0.1), rgba(255, 255, 255, 0.005));
+  background-image: linear-gradient(bottom, rgba(255, 198, 115, 0.1), rgba(255, 255, 255, 0.005));
+}
+
+/* line 387, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/Applications/gta/.metadata/.plugins/com.emc.xcp.uitemplate.ui/resources/custom-themes/xcptcln.CleanTheme-1.0.0.jar/cleantheme.scss */
+.res-row-narrow .xcp_results_list-cls .x-grid-row .x-grid-cell {
+  padding-top: 3px!important;
+  padding-bottom: 3px!important;
+  height: auto;
+}
+
+/* line 388, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/Applications/gta/.metadata/.plugins/com.emc.xcp.uitemplate.ui/resources/custom-themes/xcptcln.CleanTheme-1.0.0.jar/cleantheme.scss */
+.res-row-wide .xcp_results_list-cls .x-grid-row .x-grid-cell {
+  padding-top: 10px!important;
+  padding-bottom: 10px!important;
+  height: auto;
+}
+
+/* line 391, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/Applications/gta/.metadata/.plugins/com.emc.xcp.uitemplate.ui/resources/custom-themes/xcptcln.CleanTheme-1.0.0.jar/cleantheme.scss */
+.res-row-largefont .x-grid-row .x-grid-cell {
+  font: normal 14px Helvetica,Arial,sans-serif;
+}
+
+/* line 392, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/Applications/gta/.metadata/.plugins/com.emc.xcp.uitemplate.ui/resources/custom-themes/xcptcln.CleanTheme-1.0.0.jar/cleantheme.scss */
+.res-row-smallfont .x-grid-row .x-grid-cell {
+  font: normal 10px Helvetica,Arial,sans-serif;
+}
+
+/* line 394, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/Applications/gta/.metadata/.plugins/com.emc.xcp.uitemplate.ui/resources/custom-themes/xcptcln.CleanTheme-1.0.0.jar/cleantheme.scss */
+.res-largefont .x-column-header-inner .x-column-header-text {
+  font-size: 14px;
+}
+
+/* line 395, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/Applications/gta/.metadata/.plugins/com.emc.xcp.uitemplate.ui/resources/custom-themes/xcptcln.CleanTheme-1.0.0.jar/cleantheme.scss */
+.res-largefont .x-grid-row .x-grid-cell {
+  font-size: 14px;
+}
+
+/* line 396, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/Applications/gta/.metadata/.plugins/com.emc.xcp.uitemplate.ui/resources/custom-themes/xcptcln.CleanTheme-1.0.0.jar/cleantheme.scss */
+.res-largefont .xcp_results_list-cls .x-grid-row .x-grid-cell {
+  padding-top: 10px!important;
+  padding-bottom: 10px!important;
+  height: auto;
+}
+
+/* line 398, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/Applications/gta/.metadata/.plugins/com.emc.xcp.uitemplate.ui/resources/custom-themes/xcptcln.CleanTheme-1.0.0.jar/cleantheme.scss */
+.res-smallfont .x-column-header-inner .x-column-header-text {
+  font-size: 10px;
+}
+
+/* line 399, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/Applications/gta/.metadata/.plugins/com.emc.xcp.uitemplate.ui/resources/custom-themes/xcptcln.CleanTheme-1.0.0.jar/cleantheme.scss */
+.res-smallfont .x-grid-row .x-grid-cell {
+  font-size: 10px;
+}
+
+/* line 400, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/Applications/gta/.metadata/.plugins/com.emc.xcp.uitemplate.ui/resources/custom-themes/xcptcln.CleanTheme-1.0.0.jar/cleantheme.scss */
+.res-smallfont .xcp_results_list-cls .x-grid-row .x-grid-cell {
+  padding-top: 3px!important;
+  padding-bottom: 3px!important;
+  height: auto;
+}
+
+/*************************
+Charts
+*/
+/******************
+Tree
+*/
+/* line 410, C:/EMC/xcp/xCPDesigner_2.0/xCPDesigner/Applications/gta/.metadata/.plugins/com.emc.xcp.uitemplate.ui/resources/custom-themes/xcptcln.CleanTheme-1.0.0.jar/cleantheme.scss */
+.taxonomy-tree .xcp_content_tree-cls .x-grid-tree-node-expanded .x-tree-icon-parent {
+  background: transparent no-repeat url("../../../../../Artifacts/Resources/ccm_case_folder.png");
+  background-image: url("../../../../../Artifacts/Resources/ccm_case_folder.png");
+  width: 24px!important;
+}

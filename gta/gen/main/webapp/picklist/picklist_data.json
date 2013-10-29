@@ -1,0 +1,293 @@
+{
+"_xcpMemberTypes":{
+"model": "xcp.picklist.models.StringModel",
+"data": [{
+"value": "user",
+"label": "${_UI_PickList__xcpMemberTypes_user}"
+},
+{
+"value": "group",
+"label": "${_UI_PickList__xcpMemberTypes_group}"
+}]
+},
+"uif_pl_estado_civil":{
+"model": "xcp.picklist.models.StringModel",
+"data": [{
+"value": "SOLTERO",
+"label": "${_UI_PickList_uif_pl_estado_civil_SOLTERO}"
+},
+{
+"value": "CASADO",
+"label": "${_UI_PickList_uif_pl_estado_civil_CASADO}"
+},
+{
+"value": "VIUDO",
+"label": "${_UI_PickList_uif_pl_estado_civil_VIUDO}"
+},
+{
+"value": "DIVORCIADO",
+"label": "${_UI_PickList_uif_pl_estado_civil_DIVORCIADO}"
+},
+{
+"value": "NO INDICA",
+"label": "${_UI_PickList_uif_pl_estado_civil_NO_INDICA}"
+}]
+},
+"uif_pl_tipo_numero":{
+"model": "xcp.picklist.models.StringModel",
+"data": [{
+"value": "CUADRA",
+"label": "${_UI_PickList_uif_pl_tipo_numero_CUADRA}"
+},
+{
+"value": "KILOMETRO",
+"label": "${_UI_PickList_uif_pl_tipo_numero_KILOMETRO}"
+},
+{
+"value": "MANZANA",
+"label": "${_UI_PickList_uif_pl_tipo_numero_MANZANA}"
+},
+{
+"value": "NUMERO",
+"label": "${_UI_PickList_uif_pl_tipo_numero_NUMERO}"
+},
+{
+"value": "OTRO",
+"label": "${_UI_PickList_uif_pl_tipo_numero_OTRO}"
+}]
+},
+"uif_pl_tipo_zona":{
+"model": "xcp.picklist.models.StringModel",
+"data": [{
+"value": "ASENTAMIENTO HUMANO",
+"label": "${_UI_PickList_uif_pl_tipo_zona_ASENTAMIENTO_HUMANO}"
+},
+{
+"value": "CASERIO",
+"label": "${_UI_PickList_uif_pl_tipo_zona_CASERIO}"
+},
+{
+"value": "CONJUNTO HABITACIONAL",
+"label": "${_UI_PickList_uif_pl_tipo_zona_CONJUNTO_HABITACIONAL}"
+},
+{
+"value": "COOPERATIVA",
+"label": "${_UI_PickList_uif_pl_tipo_zona_COOPERATIVA}"
+},
+{
+"value": "FUNDO",
+"label": "${_UI_PickList_uif_pl_tipo_zona_FUNDO}"
+},
+{
+"value": "GRUPO",
+"label": "${_UI_PickList_uif_pl_tipo_zona_GRUPO}"
+},
+{
+"value": "PUELBLO JOVEN",
+"label": "${_UI_PickList_uif_pl_tipo_zona_PUELBLO_JOVEN}"
+},
+{
+"value": "RESIDENCIAL",
+"label": "${_UI_PickList_uif_pl_tipo_zona_RESIDENCIAL}"
+},
+{
+"value": "UNIDAD VECINAL",
+"label": "${_UI_PickList_uif_pl_tipo_zona_UNIDAD_VECINAL}"
+},
+{
+"value": "UBANIZACION",
+"label": "${_UI_PickList_uif_pl_tipo_zona_UBANIZACION}"
+},
+{
+"value": "ZONA INDDUSTRIAL",
+"label": "${_UI_PickList_uif_pl_tipo_zona_ZONA_INDDUSTRIAL}"
+},
+{
+"value": "OTRO",
+"label": "${_UI_PickList_uif_pl_tipo_zona_OTRO}"
+}]
+},
+"xcp_taskstatuspiclkist":{
+"model": "xcp.picklist.models.StringModel",
+"data": [{
+"value": "dormant",
+"label": "${_UI_PickList_xcp_taskstatuspiclkist_dormant}"
+},
+{
+"value": "acquired",
+"label": "${_UI_PickList_xcp_taskstatuspiclkist_acquired}"
+},
+{
+"value": "ready",
+"label": "${_UI_PickList_xcp_taskstatuspiclkist_ready}"
+},
+{
+"value": "paused",
+"label": "${_UI_PickList_xcp_taskstatuspiclkist_paused}"
+}]
+},
+"uif_pl_tipo_mov_viaje":{
+"model": "xcp.picklist.models.StringModel",
+"data": [{
+"value": "INGRESO",
+"label": "${_UI_PickList_uif_pl_tipo_mov_viaje_INGRESO}"
+},
+{
+"value": "SALIDA",
+"label": "${_UI_PickList_uif_pl_tipo_mov_viaje_SALIDA}"
+}]
+},
+"xcp_wq_view_filter":{
+"model": "xcp.picklist.models.StringModel",
+"data": [{
+"value": "SHOW_ALL_TASKS",
+"label": "${_UI_PickList_xcp_wq_view_filter_SHOW_ALL_TASKS}"
+},
+{
+"value": "SHOW_PROCESSOR_ELIGIBLE_AND_OWNED_TASKS",
+"label": "${_UI_PickList_xcp_wq_view_filter_SHOW_PROCESSOR_ELIGIBLE_AND_OWNED_TASKS}"
+},
+{
+"value": "SHOW_UNASSIGNED_TASKS",
+"label": "${_UI_PickList_xcp_wq_view_filter_SHOW_UNASSIGNED_TASKS}"
+},
+{
+"value": "SHOW_PROCESSOR_ELIGIBLE_TASKS",
+"label": "${_UI_PickList_xcp_wq_view_filter_SHOW_PROCESSOR_ELIGIBLE_TASKS}"
+}]
+},
+"uif_pl_tipo_persona":{
+"model": "xcp.picklist.models.StringModel",
+"data": [{
+"value": "NATURAL",
+"label": "${_UI_PickList_uif_pl_tipo_persona_NATURAL}"
+},
+{
+"value": "JURIDICA",
+"label": "${_UI_PickList_uif_pl_tipo_persona_JURIDICA}"
+}]
+},
+"uif_pl_tipo_via":{
+"model": "xcp.picklist.models.StringModel",
+"data": [{
+"value": "ALAMEDA",
+"label": "${_UI_PickList_uif_pl_tipo_via_ALAMEDA}"
+},
+{
+"value": "AVENIDA",
+"label": "${_UI_PickList_uif_pl_tipo_via_AVENIDA}"
+},
+{
+"value": "BLCOK",
+"label": "${_UI_PickList_uif_pl_tipo_via_BLCOK}"
+},
+{
+"value": "CALLE",
+"label": "${_UI_PickList_uif_pl_tipo_via_CALLE}"
+},
+{
+"value": "CARRETERA",
+"label": "${_UI_PickList_uif_pl_tipo_via_CARRETERA}"
+},
+{
+"value": "JIRON",
+"label": "${_UI_PickList_uif_pl_tipo_via_JIRON}"
+},
+{
+"value": "MALECON",
+"label": "${_UI_PickList_uif_pl_tipo_via_MALECON}"
+},
+{
+"value": "OTRO",
+"label": "${_UI_PickList_uif_pl_tipo_via_OTRO}"
+},
+{
+"value": "OVALO",
+"label": "${_UI_PickList_uif_pl_tipo_via_OVALO}"
+},
+{
+"value": "PARQUE",
+"label": "${_UI_PickList_uif_pl_tipo_via_PARQUE}"
+},
+{
+"value": "PASAJE",
+"label": "${_UI_PickList_uif_pl_tipo_via_PASAJE}"
+},
+{
+"value": "PLAZA",
+"label": "${_UI_PickList_uif_pl_tipo_via_PLAZA}"
+}]
+},
+"xcp_taskwqflagpicklist":{
+"model": "xcp.picklist.models.IntegerModel",
+"data": [{
+"value": 1,
+"label": "${_UI_PickList_xcp_taskwqflagpicklist_1}"
+},
+{
+"value": 0,
+"label": "${_UI_PickList_xcp_taskwqflagpicklist_0}"
+}]
+},
+"uif_pl_tipo_poder":{
+"model": "xcp.picklist.models.StringModel",
+"data": [{
+"value": "RECIBIDO",
+"label": "${_UI_PickList_uif_pl_tipo_poder_RECIBIDO}"
+},
+{
+"value": "OTORGADO",
+"label": "${_UI_PickList_uif_pl_tipo_poder_OTORGADO}"
+}]
+},
+"xcp_task_state":{
+"model": "xcp.picklist.models.IntegerModel",
+"data": [{
+"value": 0,
+"label": "${_UI_PickList_xcp_task_state_0}"
+},
+{
+"value": 1,
+"label": "${_UI_PickList_xcp_task_state_1}"
+},
+{
+"value": 2,
+"label": "${_UI_PickList_xcp_task_state_2}"
+},
+{
+"value": 3,
+"label": "${_UI_PickList_xcp_task_state_3}"
+},
+{
+"value": 4,
+"label": "${_UI_PickList_xcp_task_state_4}"
+},
+{
+"value": 5,
+"label": "${_UI_PickList_xcp_task_state_5}"
+},
+{
+"value": 6,
+"label": "${_UI_PickList_xcp_task_state_6}"
+},
+{
+"value": 7,
+"label": "${_UI_PickList_xcp_task_state_7}"
+}]
+},
+"uif_pl_genero":{
+"model": "xcp.picklist.models.StringModel",
+"data": [{
+"value": "MASCULINO",
+"label": "${_UI_PickList_uif_pl_genero_MASCULINO}"
+},
+{
+"value": "FEMENINO",
+"label": "${_UI_PickList_uif_pl_genero_FEMENINO}"
+},
+{
+"value": "NO PRECISA",
+"label": "${_UI_PickList_uif_pl_genero_NO_PRECISA}"
+}]
+}
+}

@@ -1,0 +1,8 @@
+Manifest-Version: 1.0
+Require-Bundle: xcpcore, xcpcommons, uifcore, CleanTheme
+Bundle-Version: 1.0.0
+Bundle-Name: gta
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: gta
+NAMESPACE: gta
+

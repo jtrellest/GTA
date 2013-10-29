@@ -1,0 +1,64 @@
+{
+  "padding" : "0",
+  "border" : false,
+  "pageTitle" : "${_UI_Page_gta_application_master_title}",
+  "xtype" : "xcp_form",
+  "items" : [ {
+    "xcpId" : "column_box",
+    "xtype" : "xcp_column_box",
+    "collapsible" : false,
+    "collapsed" : false,
+    "collapseFirst" : true,
+    "border" : false,
+    "defaultMargins" : "5",
+    "layout" : "xcp_columnbox",
+    "cls" : "xcp-master-header",
+    "items" : [ {
+      "xcpId" : "columnhbox",
+      "xtype" : "xcp_columnhbox",
+      "orientation" : "Horizontal",
+      "width" : "100%",
+      "overflow_x" : "hidden",
+      "labelWidth" : 50,
+      "defaultMargins" : "0",
+      "margins" : "0",
+      "labelAlign" : "left",
+      "halign" : "left",
+      "valign" : "bottom",
+      "items" : [ {
+        "xcpId" : "navigation_menu",
+        "xtype" : "xcp_navigation_menu",
+        "orientation" : "horizontal",
+        "xcp_menu_onhover" : true,
+        "enableOverflow" : true,
+        "items" : [ {
+          "xcpId" : "nav_button",
+          "xtype" : "xcp_nav_button",
+          "text" : "${_UI_Page_gta_application_master_nav_button_text}",
+          "xcp_nav_type" : "page",
+          "xcp_link_type" : "none"
+        }, {
+          "xcpId" : "nav_button1",
+          "xtype" : "xcp_nav_button",
+          "text" : "${_UI_Page_gta_application_master_nav_button1_text}",
+          "xcp_nav_type" : "page",
+          "xcp_link_type" : "none"
+        }, {
+          "xcpId" : "nav_button2",
+          "xtype" : "xcp_nav_button",
+          "text" : "${_UI_Page_gta_application_master_nav_button2_text}",
+          "xcp_nav_type" : "page",
+          "xcp_link_type" : "none"
+        }, {
+          "xcpId" : "user_button",
+          "xtype" : "xcp_user_button"
+        } ]
+      } ]
+    } ]
+  }, {
+    "xcpId" : "page",
+    "xtype" : "xcp_page",
+    "cls" : "xcp-content-area",
+    "margin" : "10 10 10 10"
+  } ]
+}

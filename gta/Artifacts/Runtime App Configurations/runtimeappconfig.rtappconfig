@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rtappconfig:RuntimeAppConfig xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:rtappconfig="http://www.emc.com/xcp2/2010/rtappconfig" urn="urn:gta:com.emc.xcp.artifact.rtappconfig:Artifacts/Runtime App Configurations/runtimeappconfig.rtappconfig" categoryId="com.emc.xcp.artifact.rtappconfig" name="RuntimeAppConfig" label="RuntimeAppConfig">
+  <customTheme name="Clean Theme" path="C:\EMC\xcp\projects\GTA\gta\lib\xcptcln.CleanTheme-1.0.0.jar" cssFile="cleantheme.scss"/>
+  <appTitle exprStr="gta"/>
+</rtappconfig:RuntimeAppConfig>
